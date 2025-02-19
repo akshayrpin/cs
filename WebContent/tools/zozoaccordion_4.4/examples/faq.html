@@ -1,0 +1,162 @@
+﻿<!doctype html>
+<html class="z-width960">
+<head>
+    <title>FAQ</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0" />
+
+    <!-- Examples CSS (Not needed) -->
+    <link href="../css/zozo.examples.min.css" rel="stylesheet" />
+
+    <!-- Zozo Accordion css -->
+    <link href="../css/zozo.accordion.min.css" rel="stylesheet">
+
+    <!-- Zozo Accordion js -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/zozo.accordion.min.js"></script>
+</head>
+<body>
+    <div id="ribbon"></div>
+    <div id="page">
+        <a class="z-btn z-back" href="index.html">Back</a>
+        <h3>Answer the 10 Most Frequently Asked Interview Questions (source: jobsite.co.uk)</h3>
+
+        <!-- Zozo Accordion Start-->
+        <ul id="demo-accordion">
+            <li>
+                <h3>1. Tell me about yourself; why have you applied for this role?</h3>
+                <div>
+                    <ul>
+                        <li>Give a brief overview of your experience, don’t waffle.</li>
+                        <li>Connect your experience with the reasons for applying for the job opportunity in question</li>
+                        <li>Make sure you stick to the script of your CV.</li>
+                        <li>Provide responses that suggest you are a stable, well-adjusted and positive individual.</li>
+                        <li>Give only positive statements, sell your skills and experiences as benefits.</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <h3>2. What do you know about our company?</h3>
+                <div>
+                    <ul>
+                        <li>Demonstrate that you have researched the company; know their products, the firm’s size, its reputation within industry, its history and values.</li>
+                        <li>Allow the interviewer to tell you more about the company. Pay attention!</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <h3>3. Why do you want to work for us?</h3>
+                <div>
+                    <ul>
+                        <li>Talk about their needs and explain what you can do for them. It’s not about what you want at this stage.</li>
+                        <li>Show them you want to be part of their success story, helping them to achieve their goals and meet their challenges.</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <h3>4. Why should we hire you?</h3>
+                <div>
+                    <ul>
+                        <li>Example response: “I believe that I have the skills, knowledge, competences and experience to help the company be successful.”</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <h3>5. What kind of environment do you like working in?</h3>
+                <div>
+                    <ul>
+                        <li>Some employers are looking for specific key phrases like ‘dynamic environment’. Consider how you work best, but also think about the philosophy of the company before answering.</li>
+                        <li>Don’t say that you enjoy working in a relaxed environment if they are looking for dynamism, but also consider the kind of environment that will help you to be successful and happy.<span id="more-10995"></span></li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                <h3>6. Where do you see yourself being in 3-5 years from now?</h3>
+                <div>
+                    <ul>
+                        <li>Talk about how you would like to progress through the company. The interviewer needs to know you’re not going to jump ship at the earliest opportunity.</li>
+                        <li>Talk about the skills and experiences you’d like to gain.</li>
+                        <li>Mention any other career ambitions that are relevant to the role you’ve applied for.</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+
+                <h3>7. What are your strengths and weaknesses?</h3>
+                <div>
+                    <ul>
+                        <li>Be honest, but end on a positive note.</li>
+                        <li>Explain that you are happy to undertake further training to develop your skills.</li>
+                        <li>Show how you have managed to minimise or turn weaknesses into strengths (e.g. through training and education), and use your strengths to reduce the impact of your weaknesses.</li>
+                        <li>We all have weaknesses. Still, think about how they might affect the interviewer’s impression of you before you talk.</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+
+                <h3>8. How would you friends and colleagues describe you?</h3>
+                <div>
+                    <ul>
+                        <li>Bring out the positive aspects of what your friends have said about you.</li>
+                        <li>You can mention any criticisms, but demonstrate that you are willing to act upon advice.</li>
+                        <li>Demonstrate that you can get on with all kinds of people – particularly at work.</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+
+                <h3>9. Why are you wanting leave your current job?</h3>
+                <div>
+                    <ul>
+                        <li>Don’t criticise your past employers.</li>
+                        <li>Say something like, “I have gained significant experience, knowledge and skills over the last x number of years, but I feel that I need the fresh challenge provided by this opportunity.”</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+
+                <h3>10. If you were offered this role, when could you start?</h3>
+                <div>
+                    <ul>
+                        <li>Sound enthusiastic and demonstrate that you can be flexible. The interviewer may not always choose an immediately available person, so don’t worry if you need to give notice to your current employer. You could still be the person his or her company needs.</li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- Zozo Accordion End-->
+
+    </div>
+    <style>
+        /*change font size*/
+        .z-accordion.white.vertical > .z-section > h3 {
+            font-size: 14px;
+        }
+
+        /*wrap text long titles, http://zozoui.com/support/faq/zozo-accordion-faq/*/
+        .z-accordion.vertical > .z-section > h3 {
+            height: auto !important;
+            line-height: 22px !important;
+            padding: 12px 20px 12px 14px !important;
+        }
+    </style>
+
+    <script>
+        jQuery(document).ready(function ($) {
+            /*  jQuery activation and setting options. Visit docs.zozoui.com/accordion for 
+                complete documentation, option list, public methods, callback events.*/
+            $("#demo-accordion").zozoAccordion({
+                theme: "white",
+                active: false,
+                orientation: "vertical",
+                shadows: false,
+                scrollable: true,
+                bordered: true,
+                animation: {
+                    duration: 300
+                }
+            });
+        });
+    </script>
+</body>
+</html>

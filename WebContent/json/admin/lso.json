@@ -1,0 +1,10 @@
+{
+    
+    
+    "header": {
+        "search": "http://localhost:8080/cs/lso/search.jsp",
+        "options": [],
+        "label": "LSO ADMIN"
+       
+    }
+}

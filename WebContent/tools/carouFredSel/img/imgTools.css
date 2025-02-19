@@ -1,0 +1,185 @@
+div.dyn-caption {
+	text-align: left;
+	position: absolute;
+	background: rgb(0, 0, 0);
+	background: rgba(0, 0, 0, 0.6);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#50000000, endColorstr=#50000000);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#50000000, endColorstr=#50000000)";
+}
+
+div.caption-transparent {
+	text-align: left;
+	position: absolute;
+	background: rgb(0, 0, 0);
+	background: rgba(0, 0, 0, 0.6);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#50000000, endColorstr=#50000000);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#50000000, endColorstr=#50000000)";
+}
+
+.caption, a.caption, a.caption:link, a.caption:visited, a.caption:active, a.caption:hover {
+	color: #ffffff;
+	font-family: Arial, Helvetica;
+	font-size: 10px;
+	text-decoration: none;
+}
+
+.caption-summary, a.caption-summary, a.caption-summary:link, a.caption-summary:visited, a.caption-summary:active, a.caption-summary:hover {
+	color: #ffffff;
+	font-family: Arial, Helvetica;
+	font-size: 10px;
+	text-decoration: none;
+}
+
+.caption-title, a.caption-title, a.caption-title:link, a.caption-title:visited, a.caption-title:active, a.caption-title:hover {
+	font-family: Arial, Helvetica;
+	color: #ffffff;
+	font-wieght: bold;
+	font-size: 12px;
+	text-decoration: none;
+}
+
+
+.fx-grayscale {
+	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
+	filter: gray;
+	-webkit-filter: grayscale(1);
+}
+
+.fx-roundedcorners {
+     -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    border-radius: 10px;
+}
+
+
+.fx-dropshadow {
+	-moz-box-shadow: 3px 3px 8px #222222;
+	-webkit-box-shadow: 3px 3px 8px #222222;
+	box-shadow: 3px 3px 8px #222222;
+	/* For IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=135, Color='#222222')";
+	/* For IE 5.5 - 7 */
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=135, Color='#222222');
+}
+
+.fx-shadow {
+	-moz-box-shadow: 0px 0px 6px #222222;
+	-webkit-box-shadow: 0px 0px 6px #222222;
+	box-shadow: 0px 0px 6px #222222;
+	/* For IE 8 */
+	/* -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=6, Direction=0, Color='#222222')"; */
+	/* For IE 5.5 - 7 */
+	/* filter: progid:DXImageTransform.Microsoft.Shadow(Strength=6, Direction=0, Color='#222222'); */
+}
+
+.fx-frame {
+	border: 5px solid #ffffff;
+}
+
+.fx-polaroid {
+	text-align: left;
+	border: 10px solid #fff;
+	border-bottom: 10px solid #fff;
+	-webkit-box-shadow: 3px 3px 3px #777;
+	-moz-box-shadow: 3px 3px 3px #777;
+	box-shadow: 3px 3px 3px #777;
+}
+
+.fx-polaroid-nocaption {
+	border: 10px solid #fff;
+	border-bottom: 45px solid #fff;
+	-webkit-box-shadow: 3px 3px 3px #777;
+	-moz-box-shadow: 3px 3px 3px #777;
+	box-shadow: 3px 3px 3px #777;
+}
+
+div.fx-polaroid-caption {
+	position: absolute;
+	color: #000000;
+	background-color: #ffffff;
+	font-family: Arial, Helvetica;
+}
+
+div.fx-polaroid-caption .caption, div.fx-polaroid-caption a.caption, div.fx-polaroid-caption a.caption:link, div.fx-polaroid-caption a.caption:visited, div.fx-polaroid-caption a.caption:active, div.fx-polaroid-caption a.caption:hover {
+	color: #000000;
+	font-family: Arial, Helvetica;
+	font-size: 10px;
+	text-decoration: none;
+}
+
+div.fx-polaroid-caption .caption-summary, div.fx-polaroid-caption a.caption-summary, div.fx-polaroid-caption a.caption-summary:link, div.fx-polaroid-caption a.caption-summary:visited, div.fx-polaroid-caption a.caption-summary:active, div.fx-polaroid-caption a.caption-summary:hover {
+	color: #000000;
+	font-family: Arial, Helvetica;
+	font-size: 10px;
+	text-decoration: none;
+}
+
+div.fx-polaroid-caption .caption-title, div.fx-polaroid-caption a.caption-title, div.fx-polaroid-caption a.caption-title:link, div.fx-polaroid-caption a.caption-title:visited, div.fx-polaroid-caption a.caption-title:active, div.fx-polaroid-caption a.caption-title:hover {
+	font-family: Arial, Helvetica;
+	color: #000000;
+	font-wieght: bold;
+	font-size: 12px;
+	text-decoration: none;
+}
+
+.fx-innershadow {
+	-webkit-box-shadow: inset 0 0 50px #000, inset 0 0 50px #000, inset 0 0 50px #000;
+	-moz-box-shadow: inset 0 0 50px #000, inset 0 0 50px #000, inset 0 0 50px #000;
+	box-shadow: inset 0 0 50px #000, inset 0 0 50px #000, inset 0 0 50px #000;
+}
+
+/* Does not work on Internet Explorer*/
+.fx-sepia {
+	filter: sepia(100%);
+	-webkit-filter: sepia(100%);
+	-moz-filter: sepia(100%);
+	-ms-filter: sepia(100%);
+	-o-filter: sepia(100%);
+	filter: url(sepia.svg#sepia);
+	-webkit-filter: sepia(1);
+}
+
+.fx-blur {
+	filter: blur(2px);
+	-webkit-filter: blur(2px);
+	-moz-filter: blur(2px);
+	-o-filter: blur(2px);
+	-ms-filter: blur(2px);
+	filter: url(blur.svg#blur);
+	filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='3');
+}
+
+.fx-mat {
+	border: 5px solid #ffffff;
+	-moz-box-shadow: 0px 0px 2px #000000;
+	-webkit-box-shadow: 0px 0px 2px #000000;
+	box-shadow: 0px 0px 2px #000000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

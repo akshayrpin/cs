@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+
+	<public>N</public>
+	<tokendomain>http://localhost:8080</tokendomain>
+	<sendemail>1</sendemail>
+
+	<api>
+		<path>/csapi/rest/</path>
+	</api>
+	<pdocs>
+		<path>/csapi/rest/</path>
+	</pdocs>
+	<allowadmin>Y</allowadmin>
+
+	<tools>
+		<map>https://gis.beverlyhills.org/VBHforCS/Staff/</map>
+		<mapsearch>https://gis.beverlyhills.org/VBHforCS/StaffwSearch/</mapsearch>
+		<external>https://gis.beverlyhills.org/VBHforCS/Public/</external>
+	</tools>
+
+	<jsp>
+		<summary>/summary.jsp</summary>
+		<checkout>/checkout.jsp</checkout>
+		<form>
+			<activity>/activity.jsp</activity>
+			<activities>/activities.jsp</activities>
+			<move>/move.jsp</move>
+			<copy>/copy.jsp</copy>
+			<project>/project.jsp</project>
+			<notes>/notes.jsp</notes>
+			<divisions>/divisions.jsp</divisions>
+			<attachments>/attachments.jsp</attachments>
+			<fees>/fees.jsp</fees>
+			<finance>/fees.jsp</finance>
+<!-- 			<people>/users.jsp</people> -->
+			<people>/people.jsp</people>
+			<peoplesummary>/peoplesummary.jsp</peoplesummary>
+			<team>/team.jsp</team>
+			<appointment>/appointment.jsp</appointment>
+			<review>/review.jsp</review>
+			<inspections>/inspections.jsp</inspections>
+			<deposit>/depositpayment.jsp</deposit>
+<!-- 			<sitedata>/sitedata.jsp</sitedata> -->
+			<resolution>/resolution.jsp</resolution>
+			<history>/history.jsp</history>
+			<communications>/list.jsp</communications>
+			<apn>/apn.jsp</apn>
+			<housingcount>/housingcount.jsp</housingcount>
+			<projectinfo>/projectinfo.jsp</projectinfo>
+			<default>/form.jsp</default>
+		</form>
+		<import>
+			<resolution>/importresolution.jsp</resolution>
+		</import>
+		<history>
+			<default>/history.jsp</default>
+		</history>
+		<details>
+			<default>/details.jsp</default>
+			<peoplesummary>/details.jsp</peoplesummary>
+			<people>/viewpeople.jsp</people>
+			<sitedata>/sitedata.jsp</sitedata>
+		</details>
+		<more>
+			<archive>/archives.jsp</archive>
+		</more>
+		<list>
+			<default>/list.jsp</default>
+		</list>
+	</jsp>
+
+	<defaultdomain>http://localhost:8080</defaultdomain>
+	<entities>
+		<entity>search</entity>
+		<entity>lso</entity>
+		<entity>gis</entity>
+		<entity>finance</entity>
+		<entity>inspections</entity>
+		<entity>permit</entity>
+		<entity>parking</entity>
+		<entity>qrcode</entity>
+		<entity>maplibrary</entity>
+		
+		<search>
+			<menuid>menu11</menuid>
+			<domain>http://localhost:8080</domain>
+			<link>http://localhost:8080/cs/psearch.jsp</link>
+			<image>/cs/images/icons/controls/white/search.png</image>
+			<title>SEARCH</title>
+			<public>Y</public>
+		</search>
+		
+		<lso>
+			<menuid>menu1</menuid>
+			<domain>http://localhost:8080</domain>
+			<main>lso</main>
+			<link>lso</link>
+			<image>/cs/images/lso.png</image>
+			<title>ADDRESS</title>
+			<public>Y</public>
+		</lso>
+		<gis>
+			<menuid>menu2</menuid>
+			<domain>http://localhost:8080</domain>
+			<link>https://gis.beverlyhills.org/VBHforCS/StaffwSearch/?mobileBreakPoint=5</link>
+			<image>/cs/images/gis.png</image>
+			<title>MAP</title>
+			<public>Y</public>
+		</gis>
+		
+		<maplibrary>
+			<menuid>menu12</menuid>
+			<domain>http://localhost:8080</domain>
+			<link>https://gis.beverlyhills.org/VBHApps/</link>
+			<image>/cs/images/maplibrary.png</image>
+			<title>MAP LIBRARY</title>
+			<public>Y</public>
+		</maplibrary>
+		
+		
+		<finance>
+			<menuid>menu3</menuid>
+			<domain>http://localhost:8080</domain>
+			<main>finance</main>
+			<link>cart</link>
+			<image>/cs/images/finance.png</image>
+			<title>CASHIER</title>
+			<public>Y</public>
+		</finance>
+		<inspections>
+			<menuid>menu4</menuid>
+			<domain>http://localhost:8080</domain>
+			<link>http://localhost:8080/cs/appointments.jsp</link>
+			<image>/cs/images/inspection.png</image>
+			<title>INSPECTION</title>
+			<public>Y</public>
+		</inspections>
+		<parking>
+			<menuid>menu5</menuid>
+			<domain>http://localhost:8080</domain>
+			<main>parking</main>
+			<link>parking</link>
+			<image>/cs/images/parking.png</image>
+			<title>PARKING</title>
+			<public>Y</public>
+		</parking>
+		<qrcode>
+			<menuid>menu6</menuid>
+			<domain>http://localhost:8080</domain>
+			<link>qrcode</link>
+			<image>/cs/images/qrcode.png</image>
+			<title>QR CODE</title>
+			<public>Y</public>
+		</qrcode>
+		
+		<permit>
+			<menuid>menu10</menuid>
+			<domain>http://localhost:8080</domain>
+			<main>admin</main>
+			<image>/cs/images/lso.png</image>
+			<title>PERMITS</title>
+		
+			<admin>true</admin>
+		</permit>
+		
+		
+		
+	</entities>
+	
+	<search>
+		<credentials>
+			<login_username>admin</login_username>
+			<login_pass>$01r</login_pass>
+		</credentials>
+		<global>http://localhost:7337/solr/load_initial/query</global>
+		<people>http://localhost:7337/solr/people_core/query</people>
+		<address>http://localhost:7337/solr/address_core/query</address>
+		<team>http://localhost:7337/solr/team_core/query</team>
+		<appointment>http://localhost:7337/solr/appointment/query</appointment>
+		<address_lso>http://localhost:7337/solr/address_lso/query</address_lso>
+		<user>http://localhost:7337/solr/user_core/query</user>
+		<inspection>http://localhost:7337/solr/inspection_core/query</inspection>
+		<review>http://localhost:7337/solr/review_core/query</review>
+		<attachments>http://localhost:7337/solr/attachments_core/query</attachments>
+		<finance>http://localhost:7337/solr/finance_core/query</finance>
+		<ledger>http://localhost:7337/solr/ledger_core/query</ledger>
+	</search>
+
+	<images>
+		<back>/cs/images/icons/controls/white/back.png</back>
+		<briefcase>/cs/images/icons/controls/white/briefcase.png</briefcase>
+		<project>/cs/images/icons/controls/white/briefcase.png</project>
+		<print>/cs/images/icons/controls/white/print.png</print>
+		<appointment>/cs/images/icons/controls/white/calendar.png</appointment>
+		<clipboard>/cs/images/icons/controls/white/clipboard.png</clipboard>
+		<move>/cs/images/icons/controls/white/move.png</move>
+		<copy>/cs/images/icons/controls/white/copy.png</copy>
+		<activity>/cs/images/icons/controls/white/clipboard.png</activity>
+		<notes>/cs/images/icons/controls/white/notes.png</notes>
+		<library>/cs/images/icons/controls/white/book.png</library>
+		<attachments>/cs/images/icons/controls/white/attachment.png</attachments>
+		<people>/cs/images/icons/controls/white/people.png</people>
+		<team>/cs/images/icons/controls/white/team.png</team>
+		<map>/cs/images/icons/controls/white/map.png</map>
+		<search>/cs/images/icons/controls/white/search.png</search>
+		<archive>/cs/images/icons/controls/white/archives.png</archive>
+		<divisions>/cs/images/icons/controls/white/puzzle.png</divisions>
+		<deposit>/cs/images/icons/controls/white/deposit.png</deposit>
+		<finance>/cs/images/icons/controls/white/finance.png</finance>
+		<vehicle>/cs/images/icons/controls/white/vehicle.png</vehicle>
+		<parking>/cs/images/icons/controls/white/parking.png</parking>
+		<history>/cs/images/icons/controls/white/history.png</history>
+		<sitedata>/cs/images/icons/controls/white/site.png</sitedata>
+		<resolution>/cs/images/icons/controls/white/resolution.png</resolution>
+		<searchconditions>/cs/images/icons/input/searchconditions.png</searchconditions>
+		<complete>/cs/images/icons/complete.png</complete>
+		<partcomplete>/cs/images/icons/part-complete.png</partcomplete>
+		<incomplete>/cs/images/icons/incomplete.png</incomplete>
+		<no>/cs/images/icons/no.png</no>
+		<defaultcomplete>/cs/images/icons/default-complete.png</defaultcomplete>
+		<naincomplete>/cs/images/icons/nacomplete.png</naincomplete>
+		<next>/cs/images/icons/next.png</next>
+		<previous>/cs/images/icons/previous.png</previous>
+		<rotate>/cs/images/icons/controls/black/rotate.png</rotate>
+		<placeholder>/cs/images/image_placeholder.png</placeholder>
+		<black>
+			<add>/cs/images/icons/controls/black/add.png</add>
+			<edit>/cs/images/icons/controls/black/edit.png</edit>
+			<delete>/cs/images/icons/controls/black/delete.png</delete>
+			<calendar>/cs/images/icons/input/calendar.png</calendar>
+			<email>/cs/images/icons/controls/black/email.png</email>
+		</black>
+	</images>
+
+	<messsages>
+		<cs200>SUCCESS</cs200>
+		
+		<cs400>PERMISSION DENIED NO USER ROLE BAD REQUEST</cs400>
+		<cs401>UNAUTHORIZED</cs401>
+		<cs402>SESSION EXPIRED</cs402>
+		<cs403>INVALID TOKEN </cs403>
+		<cs404>NOT FOUND</cs404>
+		<cs406>NOT ACCEPTABLE SEND VIA HTTPS</cs406>
+		<cs412>PRECONDITION FAILED</cs412>
+		
+		<cs500>EXCEPTION WHILE PROCESSING YOUR REQUEST INTERNAL SERVER ERROR </cs500>
+	</messsages>
+
+	<choiceslocation>C:/DL/csfiles/choices/</choiceslocation>	
+
+	<dropdownlist>
+		<streetlist>http://localhost:8080/csapi/rest/general/getstreetlist</streetlist>
+		<streetfractionlist>http://localhost:8080/csapi/rest/general/getstreetfraction</streetfractionlist>
+		<applicationstatus>http://localhost:8080/csapi/rest/general/getapplicationstatus</applicationstatus>
+		<department>http://localhost:8080/csapi/rest/general/getdepartments</department>
+	</dropdownlist>
+
+<!-- HTML head imports -->
+
+	<htmlimports>
+
+		<fonts>
+			<font>https://fonts.googleapis.com/css?family=Oswald:300,700</font>
+			<font>https://fonts.googleapis.com/css?family=Armata</font>
+			<font>https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700</font>
+		</fonts>
+
+	<!-- jQuery -->
+		<jquery>https://csdev.beverlyhills.org/cs/tools/jquery.min.js</jquery>
+
+		<style>_rooturl/_contextroot/tools/jquery-ui/themes/themes/smoothness/jquery-ui.min.css</style>
+		<script>_rooturl/_contextroot/tools/jquery-ui/jquery-ui.min.js</script>
+	
+		<script>_rooturl/_contextroot/tools/alain/cs.load.js</script>
+
+	</htmlimports>
+
+
+
+
+
+
+
+
+
+
+</config>
+
+
+
+
+
+
+

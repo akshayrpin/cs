@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1" />
+		<meta name="author" content="caroufredsel.dev7studios.com" />
+
+		<title>carouFredSel: a circular, responsive jQuery carousel</title>
+		<link rel="stylesheet" type="text/css" href="cs.slides.css">
+
+		<!-- include jQuery + carouFredSel plugin -->
+		<script type="text/javascript" language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<script type="text/javascript" language="javascript" src="jquery.carouFredSel-6.2.1-packed.js"></script>
+
+		<!-- optionally include helper plugins -->
+		<script type="text/javascript" language="javascript" src="helper-plugins/jquery.mousewheel.min.js"></script>
+		<script type="text/javascript" language="javascript" src="helper-plugins/jquery.transit.min.js"></script>
+		<script type="text/javascript" language="javascript" src="helper-plugins/jquery.ba-throttle-debounce.min.js"></script>
+
+		<script type="text/javascript" language="javascript" src="cs.carouFredSel.js"></script>
+
+		<!-- fire plugin onDocumentReady -->
+		<script type="text/javascript" language="javascript">
+			$(function() {
+				$('.slidelist').carouFredSel({
+					auto: false,
+					responsive: true,
+					align: 'center',
+					prev: '.prevnav',
+					next: '.nextnav',
+					pagination: "#slidepager",
+					mousewheel: true,
+					items: {
+						visible: 4
+					},
+					scroll: {
+						fx: 'directscroll'
+					},
+					swipe: {
+						onMouse: true,
+						onTouch: true
+					}
+				});
+			});
+		</script>
+
+	</head>
+	<body>
+
+		<div class="slidecontainer">
+			<div class="slidewrapper">
+						<div class="slidelist">
+							<div class="slide">
+								<div class="slideimg" style="background: url(https://image.tmdb.org/t/p/original/sbpTzyKkBedre1CjExJMNawEbHB.jpg); background-size: cover; background-repeat: no-repeat; background-position: center;"/>
+								</div>
+								<div class="slidecaption">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+								</div>
+							</div>
+							<div class="slide">
+								<div class="slideimg" style="background: url(https://image.tmdb.org/t/p/original/2eVKyH2rQ6LxP3U5DBZiAsqQyMy.jpg); background-size: cover; background-repeat: no-repeat; background-position: center;"/>
+								</div>
+								<div class="slidecaption">
+									This is a caption
+								</div>
+							</div>
+							<div class="slide">
+								<div class="slideimg" style="background: url(https://image.tmdb.org/t/p/original/3AGDj2IzzQGeivvOgJ8xZGgJawV.jpg); background-size: cover; background-repeat: no-repeat; background-position: center;"/>
+								</div>
+								<div class="slidecaption">
+									This is a caption
+								</div>
+							</div>
+							<div class="slide">
+								<div class="slideimg" style="background: url(https://image.tmdb.org/t/p/original/eXueYQllTCwyxO9bXBCRc2pAYwr.jpg); background-size: cover; background-repeat: no-repeat; background-position: center;"/>
+								</div>
+								<div class="slidecaption">
+									This is a caption
+								</div>
+							</div>
+							<div class="slide">
+								<div class="slideimg" style="background: url(https://image.tmdb.org/t/p/original/6hKxQVUSO5TUda47lpYYtT060gx.jpg); background-size: cover; background-repeat: no-repeat; background-position: center;"/>
+								</div>
+								<div class="slidecaption">
+									This is a caption
+								</div>
+							</div>
+							<div class="slide">
+								<div class="slideimg" style="background: url(https://image.tmdb.org/t/p/original/a9OmuXLiyjdb1YiBrWeiaxJYyYI.jpg); background-size: cover; background-repeat: no-repeat; background-position: center;"/>
+								</div>
+								<div class="slidecaption">
+									This is a caption
+								</div>
+							</div>
+							<div class="slide">
+								<div class="slideimg" style="background: url(https://image.tmdb.org/t/p/original/d0DBEDYng6gSJRu3EVgQuQYeiB.jpg); background-size: cover; background-repeat: no-repeat; background-position: center;"/>
+								</div>
+								<div class="slidecaption">
+									This is a caption
+								</div>
+							</div>
+							<div class="slide">
+								<div class="slideimg" style="background: url(https://image.tmdb.org/t/p/original/zVS90oHE4hS9YkURL6EeRnYYR4L.jpg); background-size: cover; background-repeat: no-repeat; background-position: center;"/>
+								</div>
+								<div class="slidecaption">
+									This is a caption
+								</div>
+							</div>
+							<div class="slide">
+								<div class="slideimg" style="background: url(https://image.tmdb.org/t/p/original/xQLeN4cdLqw9aJhuVXHx4CHcUWS.jpg); background-size: cover; background-repeat: no-repeat; background-position: center;"/>
+								</div>
+								<div class="slidecaption">
+									This is a caption
+								</div>
+							</div>
+							<div class="slide">
+								<div class="slideimg" style="background: url(https://image.tmdb.org/t/p/original/3fJyJWCc4nHYEycd9y2b9iNuEIZ.jpg); background-size: cover; background-repeat: no-repeat; background-position: center;"/>
+								</div>
+								<div class="slidecaption">
+									This is a caption
+								</div>
+							</div>
+						</div>
+
+			</div>
+						<a class="prevnav">&#10094;</a>
+						<a class="nextnav">&#10095;</a>
+		</div>
+
+
+		<br />
+		<br />
+	</body>
+</html>

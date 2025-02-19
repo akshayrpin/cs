@@ -1,0 +1,50 @@
+MOBILE CHECKBOX README
+======================
+
+I created this plugin to easily enable the iOS 5+ style checkboxes in HTML development. It is completly customisable with CSS for advanced users or the JS call can be modified to allow for simple tweaks like the colour, or the border-radus to turn the checkboxes into iOS4 style. I was keen to make the checkboxes without the need for images so it can be modified so quickly, because of this i had to use CSS3 which means that older browsers will be effected but it does degrade gracefully. To make the code base shorter, for perfect results use jQuery 1.8+ as this includes browser prefixing support.
+
+
+CONTENTS
+==================
+/test.html
+/test_advanced.html
+/assets/js/jquery.mobileCheckbox.js
+/assets/css/mobileCheckbox.iOS.css
+
+
+USAGE
+==================
+Include the stylesheet located in assets/css into the head of the file.
+
+This plugin requires jQuery, you can link to jQuery directly from google to improve speed.
+
+http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js
+
+Include jQuery plus the javascript file residing in the js folder before the closing body tag.
+
+Simply put the following code below the included js files:
+
+<script>
+	$(":checkbox").mobileCheckbox();
+</script>
+
+All available configfuration options are below.
+
+<script>
+	$(":checkbox").mobileCheckbox({
+		checkedText: "ON",
+		uncheckedText: "OFF",
+		color: "#448DFF",
+		width: "auto",
+		height: "auto",
+		borderRadius: 1000,
+		textMargin: 10,
+		checkMargin: 5,
+		draggable: true,
+		enableThreshold: true,
+		animation: {
+			easing: "swing",
+			duration: 300
+		}
+	});
+</script>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>iOS Check Test</title>
+		<link rel="stylesheet" href="assets/css/mobileCheckbox.iOS.css" type="text/css"/>
+	</head>
+	<body>
+	
+		<h3>iOS 7</h3>
+		<!-- This is just a little fun demonstrating the power of CSS -->
+		<div class="iOS7Style">
+			<!-- Don't Write Styles Inline, This is just an example -->
+			<style type="text/css">
+				.iOS7Style .CheckboxGlow {display: none;}
+				.iOS7Style .MobileCheckboxContainer{border:1px solid #E6E6E6;}
+				.iOS7Style .MobileCheckboxContainer .CheckboxHandle {
+					background: #fff; 
+					-moz-box-shadow: none;
+					-webkit-box-shadow: none;
+					box-shadow: none;
+				}
+				
+				.iOS7Style .iOS7:checked { display: block !important;}
+				.iOS7Style .iOS7:checked ~ .CheckboxHandle {border:2px solid #53D769;}
+			</style>
+			
+			<input class="iOS7" type="checkbox" name="checkbox_name" disabled="DISABLED">
+			<input class="iOS7" type="checkbox" name="checkbox_name" disabled="DISABLED" checked="CHECKED">
+			<input class="iOS7" type="checkbox" name="checkbox_name">
+			<input class="iOS7" type="checkbox" name="checkbox_name" checked="CHECKED">
+		</div>
+		
+		<h3>iOS 5 & 6</h3>
+		<input class="iOS5" type="checkbox" name="checkbox_name" disabled="DISABLED">
+		<input class="iOS5" type="checkbox" name="checkbox_name" disabled="DISABLED" checked="CHECKED">
+		<input class="iOS5" type="checkbox" name="checkbox_name">
+		<input class="iOS5" type="checkbox" name="checkbox_name" checked="CHECKED">
+
+		<h3>iOS 4-</h3>
+		<input class="iOS4" type="checkbox" name="checkbox_name" disabled="DISABLED">
+		<input class="iOS4" type="checkbox" name="checkbox_name" disabled="DISABLED" checked="CHECKED">
+		<input class="iOS4" type="checkbox" name="checkbox_name">
+		<input class="iOS4" type="checkbox" name="checkbox_name" checked="CHECKED">
+			
+		<h3>Coloured Checkbox</h3>
+		<p>Note also, a checkbox can't be styled twice. So if you have multiple on a page, make sure you target specific ones before all checkboxes</p>
+		<input type="checkbox" name="checkbox_name" checked="CHECKED">
+		
+		<h3>Smaller</h3>
+		<p>Note, to get it to your perfect size, you may need to adjust the JS margin settings</p>
+		<div class="smaller">
+			<!-- Don't Write Styles Inline, This is just an example -->
+			<style type="text/css">
+				.smaller .MobileCheckboxContainer div.CheckboxLabel {
+					font-size: 10px;
+				}
+				.smaller .MobileCheckboxContainer .CheckboxHandle {
+					border-width: 1px;
+				}
+			</style>
+			<input class="small" type="checkbox" name="checkbox_name">
+		</div>
+		
+		<h3>Bigger</h3>
+		<div class="bigger">
+			<!-- Don't Write Styles Inline, This is just an example -->
+			<style type="text/css">
+				.bigger .MobileCheckboxContainer div.CheckboxLabel {
+					font-size: 50px;
+				}
+				.bigger .MobileCheckboxContainer .CheckboxHandle {
+					border-width: 6px;
+				}
+			</style>
+			<input class="iOS5" type="checkbox" name="checkbox_name">
+			<input class="iOS5" type="checkbox" name="checkbox_name" checked="checked">
+		</div>
+		
+		<h3>Callbacks</h3>
+		<div class="callbacks">
+		<!-- Don't Write Styles Inline, This is just an example -->
+			<style type="text/css">
+				.callbacks .MobileCheckboxContainer {
+					display: inline-block;
+				}
+			</style>
+			<label for="Checkbox1">Trigger on change:</label> <input class="iOS5 change" id="Checkbox1" type="checkbox" name="checkbox_name" checked="checked">
+			<br />
+			<label>Triggers on completion: <input class="iOS5 complete" type="checkbox" name="checkbox_name" checked="checked"></label>
+			<br />
+			<label>Triggers on completion if changed: <input class="iOS5 completechanged" type="checkbox" name="checkbox_name" checked="checked"></label>
+		</div>
+		<h3>API Access</h3>
+		<input class="iOS5" type="checkbox" data-id="toggleCheckbox" name="checkbox_name" checked="checked">
+		<br />
+		<button name="offCheckbox" type="button">Checkbox Off</button>
+		<button name="toggleCheckbox" type="button">Toggle Checkbox</button>
+		<button name="onCheckbox" type="button">Checkbox On</button>
+		<br />
+		<button name="disabledCheckbox" type="button">Checkbox Disabled</button>
+		<button name="enabledCheckbox" type="button">Checkbox Enabled</button>
+		
+<!-- 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
+		<script src="../../tools/jquery.min.js"></script>
+		<script src="assets/js/jquery.mobileCheckbox.js" charset="utf-8"></script>
+		<script type="text/javascript">
+			$("input[type=checkbox].iOS7").mobileCheckbox({
+				color:"#53D769",
+				checkedText:"",
+				uncheckedText:"",
+				width:40,
+				height:25,
+				animation: {
+				easing: "linear",
+				duration: 150
+			}
+			});
+			$("input[type=checkbox].iOS5").mobileCheckbox();
+			$("input[type=checkbox].iOS4").mobileCheckbox({
+				borderRadius: 5
+			});
+			$("input[type=checkbox].small").mobileCheckbox({
+				textMargin: 5,
+				checkMargin: 2
+			});
+			/* The above wouldn't work if this target all checkboxes was first */
+			$("input[type=checkbox]").mobileCheckbox({
+				color: "#F18C3D"
+			});
+			
+			/* Callback */
+			$("input[type=checkbox].change").on('change',function(e){
+				var self = $(this);
+				alert(self.is(":checked")?"ON":"OFF");
+			});
+			$("input[type=checkbox].complete").on('complete',function(e){
+				var self = $(this);
+				alert(self.is(":checked")?"ON":"OFF");
+			});
+			$("input[type=checkbox].completechanged").on('complete',function(e, changed){
+				var self = $(this);
+				if(changed){
+					alert(self.is(":checked")?"ON":"OFF");
+				}
+			});
+			
+			/* API */
+			$("button[name='toggleCheckbox']").on('click',function(e){
+				var self = $(this);
+				$("input[data-id='toggleCheckbox']").mobileCheckbox("toggle");
+			});
+			
+			$("button[name='onCheckbox']").on('click',function(e){
+				var self = $(this);
+				$("input[data-id='toggleCheckbox']").mobileCheckbox("checked", true);
+			});
+			
+			$("button[name='offCheckbox']").on('click',function(e){
+				var self = $(this);
+				$("input[data-id='toggleCheckbox']").mobileCheckbox("checked", false);
+			});
+			
+			$("button[name='disabledCheckbox']").on('click',function(e){
+				var self = $(this);
+				$("input[data-id='toggleCheckbox']").mobileCheckbox("disabled", true);
+			});
+			
+			$("button[name='enabledCheckbox']").on('click',function(e){
+				var self = $(this);
+				$("input[data-id='toggleCheckbox']").mobileCheckbox("disabled", false);
+			});
+		</script>
+	</body>
+</html>

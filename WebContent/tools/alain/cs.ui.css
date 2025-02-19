@@ -1,0 +1,460 @@
+
+	html, body { padding: 0px; margin: 0px; height: 100% }
+
+	#csuibody { display: table; width: 100%; height: 100% }
+	#csuimain { display: table-cell; width: 80%; min-height: 100%; vertical-align: top; }
+	#csuisub { display: table-cell; border-left: 1px solid #eeeeee; min-height: 100%; vertical-align: top; background-color: #fbfbfb }
+
+	#csuicontrols { display: table; width: 100%; }
+	#csuicontrol { display: table-cell; width: 80%; }
+	#csuisubcontrol { display: table-cell; border-left: 1px solid #eeeeee; }
+
+	.csuicontent { padding-left: 20px; padding-right: 20px; }
+	div.csuicontrol, div.csuisubcontrol { background-color: #aaaaaa; }
+	.csuicontrol, .csuisubcontrol { font-family: Roboto Condensed, Arial, Helvetica, sans-serif; font-size: 12px; color: #ffffff; font-weight: 700; vertical-align: middle; height: 35px; padding-left: 10px }
+
+	.csuiminicontent { height: 100% }
+	table.csuiminitree { width: 225px; height: 100%; background-color: #efefef }
+	td.csuiminitree { vertical-align: top; }
+	table.csuimini { width: 100%; padding: 0px; height: 100%; margin: 0px }
+
+	.csuicontrol { font-family: Roboto Condensed, Arial, Helvetica, sans-serif; font-size: 12px; color: #ffffff; font-weight: 700; vertical-align: middle; height: 35px; padding-left: 10px; text-transform: uppercase; line-height: 35px;  }
+
+	#title { padding: 5px; font-family: Oswald, Arial, Helvetica, sans-serif; font-size: 40px; font-weight: 700; vertical-align: bottom; color: #555555 }
+	#subtitle { padding: 5px; font-family: Oswald, Arial, Helvetica, sans-serif; font-size: 25px; font-weight: 700; vertical-align: bottom; color: #bbbbbb; }
+	#entitydescription { font-family: Roboto Condensed, Arial, Helvetica, sans-serif; font-size: 15px; color: #555555; }
+
+	table.csui, table.csui_title { width: 100%; padding: 0px; }
+	table.csui { background-color: #cccccc; border-spacing: 1px; border-collapse: separate; }
+	td.csui { padding: 6px; font-family: Armata, Arial, Helvetica, sans-serif; font-size: 12px; background-color: #ffffff; }
+	td.common { padding: 6px; font-family: Armata, Arial, Helvetica, sans-serif; font-size: 12px; }
+
+	table.csui_title { border-spacing: 0px; background-color: #777777; }
+	td.csui_title { padding: 5px; width: 100%; font-family: Oswald, Arial, Helvetica, sans-serif; font-size: 18px; font-weight: 700; color: #ffffff; vertical-align: top; text-transform: uppercase }
+	td.csui_title_black { padding: 5px; width: 100%; font-family: Oswald, Arial, Helvetica, sans-serif; font-size: 18px; font-weight: 700; color: #000000; vertical-align: top; text-transform: uppercase }
+
+	.csuialert[alert="issued"] { background-color: #64865f; !important }
+	.csuialert[alert="hold"] { background-color: #8f6662; !important }
+	.csuialert[alert="hold_h"] { background-color: #8f6662; !important }
+	.csuialert[alert="hold_s"] { background-color: #e2af4c; !important }
+	.csuialert[alert="hold_p"] { background-color: #CEDA2D; !important }
+
+	a.csui, a.csui_header, a.csuisub, a.csuisub_header { color: #000000; text-decoration: none }
+	a.csui:hover, a.csui_header:hover, a.csuisub:hover, a.csuisub_header:hover { color: #336699; }
+	td.csui_header, td.csui_label { padding: 6px; font-family: Roboto Condensed, Arial, Helvetica, sans-serif; font-size: 10px; background-color: #eeeeee; text-transform: uppercase }
+	.csui_fielddescription { padding: 6px; font-family: Roboto Condensed, Arial, Helvetica, sans-serif; font-size: 12px; color: blue; }
+
+	td.csui_groupheader { padding: 6px; font-family: Roboto Condensed, Arial, Helvetica, sans-serif; font-size: 12px; background-color: #efefef; text-transform: uppercase; color: #333333 }
+	td.csui_grouppart { padding: 6px; font-family: Armata, Arial, Helvetica, sans-serif; font-size: 11px; background-color: #efefef; color: #333333 }
+
+	td.csui_label { width: 10%; white-space: nowrap; vertical-align: top; padding: 8px; padding-top: 15px }
+	td.vertical.csui_field { width: 40%; }
+	td.vertical.csui_empty { background-color: #eeeeee !important; }
+	td.csui_input { padding: 6px; font-family: Armata, Arial, Helvetica, sans-serif; font-size: 12px; background-color: #ffffff; width: 40% }
+	div.csui_divider { height: 25px; }
+
+	a.csui_title { color: #ffffff; text-decoration: none }
+	a.csuisub_title { color: #555555; text-decoration: none }
+	a.csuisub_header_title { color: #888888; text-decoration: none }
+
+	table[colnum="2"] td.csui { width: 40%; }
+	table[colnum] td.csui_header { width: 10%; white-space: nowrap }
+	td[mtype="currency"], td[mtype="integer"], td[mtype="number"] { text-align: right }
+
+	.csuisubcontent { padding-left: 10px; padding-right: 10px; }
+	table.csuisub_title { width: 100%; padding: 0px; border-spacing: 0px; border-collapse: separate; }
+	table.csuisub { width: 100%; padding: 0px; border-spacing: 1px; border-collapse: separate; background-color: #cccccc; }
+	td.csuisub_title { padding: 2px; font-family: Oswald, Arial, Helvetica, sans-serif; font-size: 18px; font-weight: 700; text-transform: uppercase; vertical-align: top; color: #555555 }
+	td.csuisub_header, td.csuisub_label { padding: 6px; font-family: Roboto Condensed, Arial, Helvetica, sans-serif; font-size: 9px; background-color: #eeeeee; text-transform: uppercase }
+	td.csuisub_label { width: 10%; vertical-align: top; }
+	td.csuisub { padding: 6px; font-family: Armata, Arial, Helvetica, sans-serif; font-size: 12px; background-color: #ffffff !important; vertical-align: top; }
+	div.csuisub_divider { height: 25px; }
+	hr.csuisub_divider { height: 0; border: 0; border-top: 1px solid #eeeeee }
+
+	td.csui_rowcontrols, td.csuisub_rowcontrols { background-color: #eeeeee }
+	td.csui_controls, td.csuisub_controls, td.csuisub_header_controls, td.csuisub_rowcontrols { width: 1px; white-space: nowrap }
+
+	td.csui_options, td.csuisub_options { padding: 5px; padding-left: 10px; padding-right: 10px; background-color: #777777; border: 1px solid #cccccc; border-bottom: 0px; border-radius: 5px 5px 0px 0px; cursor: pointer; width: 1px; white-space: nowrap; font-family: Roboto Condensed, Arial, Helvetica, sans-serif; font-size: 10px; color: #ffffff; text-transform: uppercase }
+	td.csui_options:hover, td.csuisub_options:hover, td.selected_option { background-color: #eeeeee; color: 000000 !important; }
+	div.ui_loading { font-family: Roboto Condensed, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: bold; color: #000000; text-transform: uppercase; background-color: #eeeeee; padding: 10px }
+	#resultsloading { font-family: Roboto Condensed, Arial, Helvetica, sans-serif; font-size: 30px; font-weight: bold; color: #000000; text-transform: uppercase; background-color: #ffffff; padding: 10px }
+
+
+
+	table.csuisub_header_title { width: 100%; padding: 0px; border-spacing: 0px; border-collapse: separate }
+	td.csuisub_header_title { padding: 4px; padding-top: 10px; padding-bottom: 10px; font-family: Roboto Condensed, Arial, Helvetica, sans-serif; font-weight: 700; font-size: 14px; color: #888888; text-transform: uppercase }
+
+	a.csui_title { color: #ffffff; text-decoration: none }
+	td.csui_contenttype, td.csuisub_contenttype { width: 1%; padding-left: 6px; white-space: nowrap; }
+	a.csuisub_title { color: #555555; text-decoration: none }
+	a.csuisub_header_title { color: #888888; text-decoration: none }
+
+	td.csuisub[grouptype="review"][type="Date"] { font-family: Roboto Condensed, Arial, Helvetica, sans-serif; background-color: #eeeeee; width: 25%; white-space: nowrap; text-align: right }
+
+	table.csuisub_review_title {
+		width: 100%;
+		background-color: #f5f5f5;
+		border: 1px solid #cccccc;
+		border-bottom: 0px;
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+	}
+
+/*	table.csuisub_review_title[unapproved="Y"] { background-color: #f3e9e9 !important; } */
+
+	td.csuisub_review_title, a.csuisub_review_title {
+		font-family: Roboto Condensed, Arial, Helvetica, sans-serif;
+		font-size: 12px;
+		color: #888888;
+		text-transform: uppercase;
+		text-decoration: none;
+	}
+
+	td.csuisub_review_title {
+		padding: 2px;
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+
+	table.csuisub[approved="Y"] { background-color: #cccccc !important }
+	td.csuisub_header[approved="Y"] { background-color: #eaf3e9 !important; color: #000000 !important }
+	td.csuisub_title_control[approved="Y"] {
+		background-image: url(/cs/images/icons/controls/color/approve.png);
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+
+	table.csuisub[unapproved="Y"] { background-color: #cccccc !important }
+	td.csuisub_header[unapproved="Y"] { background-color: #f3e9e9 !important; color: #000000 !important }
+	td.csuisub_title_control[unapproved="Y"] {
+		background-image: url(/cs/images/icons/controls/color/unapprove.png);
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+
+	td.csui_tools { padding-left: 10px; padding-right: 10px; padding-top: 0px; padding-bottom: 0px }
+
+	input, td.csform_checkboxtext, textarea, select option { font-family: Armata, Arial, Helvetica, sans-serif; font-size: 12px }
+	.csui_buttons { text-align: right }
+	input[type=submit], a.button, span.button {
+		background-color: #eeeeee;
+		border: 1px solid #cccccc;
+		font-family: Oswald, Arial, Helvetica;
+		text-transform: uppercase;
+		padding: 10px;
+		padding-left: 20px;
+		padding-right: 20px;
+		margin: 10px;
+		font-size: 16px;
+		font-weight: bold;
+		border-radius: 5px;
+		color: #000000;
+		cursor: pointer;
+		text-decoration: none;
+	}
+	input[type=submit][class=connectors] {
+		background-color: #eeeeee;
+		border: 1px solid #cccccc;
+		font-family: Oswald, Arial, Helvetica;
+		text-transform: uppercase;
+		padding: 10px;
+		padding-left: 20px;
+		padding-right: 20px;
+		margin: 10px;
+		font-size: 16px;
+		font-weight: bold;
+		border-radius: 5px;
+		color: #000000;
+		cursor: pointer;
+		text-decoration: none;
+		 width: 150px;
+    	display: inline-block;
+	}
+	input[type=submit][value=save], input.save {
+		background-image: url(/cs/images/icons/controls/black/save.png);
+		background-repeat: no-repeat;
+		background-position: 20px center;
+		padding-left: 45px;
+	}
+	input[type=submit][value=cancel], a.cancel.button {
+		background-image: url(/cs/images/icons/controls/black/delete.png);
+		background-repeat: no-repeat;
+		background-position: 20px center;
+		padding-left: 45px;
+	}
+	input[type=submit]:hover, a.button:hover, span.button:hover {
+		background-color: #336699;
+		color: #ffffff;
+	}
+	input[type=submit][value=save]:hover, input.save:hover {
+		background-color: #669966;
+		background-image: url(/cs/images/icons/controls/white/save.png);
+		color: #ffffff;
+	}
+	input[type=submit][value=cancel]:hover, a.cancel.button:hover {
+		background-color: #996666;
+		background-image: url(/cs/images/icons/controls/white/delete.png);
+		color: #ffffff;
+	}
+	input[type=file] {
+		border: 0px;
+		background-color: transparent;
+	}
+
+	#minisearch { text-align: center; padding: 10px; }
+	input[itype=minisearch] { width: 90%; border: 0px; border-radius: 10px; box-shadow: inset 0px 0px 4px 0px #000000; font-family: Arial, Helvetica, sans-serif; font-size: 12px; padding: 5px; outline: none }
+
+	.csform { border: 1px solid #cccccc; width: 100%; box-sizing:border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; }
+	.csform_select { width: 100%; }
+	.csform_alert { border-left: 5px solid #cc9999; }
+	.csform_highlight { border: 1px solid #9ecaed; box-shadow: 0 0 10px #9ecaed; }
+	.csform_error { border: 1px solid #cc9999; box-shadow: 0 0 10px #cc9999; border-left: 5px solid #cc9999; }
+	.csform_message { width:100%; color: #996666; font-weight: bold }
+	#csform_message { width:100%; }
+	#csform_message div { width:100%; font-family: Armata, Arial, Helvetica, sans-serif; font-size: 14px; font-weight: 700; color: #990000; }
+	#csform_message div ul li { font-family: Armata, Arial, Helvetica, sans-serif; font-size: 12px; color: #990000; }
+	.csform_message div { width:100%; padding: 5px; font-family: Armata, Arial, Helvetica, sans-serif; font-size: 12px; color: #990000; }
+
+	.label { background-color: #aaaaaa; font-family: Roboto Condensed, Arial; font-size: 12px; padding-left: 10px; height: 35px; font-weight: 700; text-transform: uppercase; color: #ffffff; line-height: 35px; vertical-align: middle }
+
+	td.csui_defaulttitle { padding: 5px; font-family: Oswald, Arial, Helvetica, sans-serif; font-size: 18px; font-weight: 700; color: #000000; vertical-align: top; text-transform: uppercase }
+	input.cs_search { width: 100%; border: 0px; border-radius: 10px; box-shadow: inset 0px 0px 3px 0px #444444; font-family: Arial, Helvetica, sans-serif; font-size: 12px; padding: 5px; outline: none; background-image: url(/cs/images/icons/white/search.png); background-repeat: no-repeat; background-position: right 5px center; }
+	.people_result { font-family: Roboto Condensed, Arial, Helvetica, sans-serif; font-size: 12px }
+	span.people_result { display: block }
+
+	.people_name { text-transform: uppercase }
+
+	td.csui[itype=textarea] { vertical-align: top }
+	table[type=horizontal] tr td[type='checkbox'],
+	table[type=horizontal] tr td[itype='email'],
+	table[type=horizontal] tr td[itype='datetime'],
+	table[type=horizontal] tr td[type='date'],
+	table[type=horizontal] tr td[type='time'],
+	table[type=horizontal] tr td[type='datetime'],
+	table[type=horizontal] tr td[itype='date'],
+	table[type=horizontal] tr td[itype='phone'],
+	table[type=horizontal] tr td[type='short'],
+	table[type=horizontal] tr td[type='type'],
+	table[type=horizontal] tr td[type='status'],
+	table[type=horizontal] tr td[type='boolean'],
+	table[type=horizontal] tr td[type='complete'],
+	table[type=horizontal] tr td[type='primary'],
+	table[type=horizontal] tr td[itype='user']
+	{ width: 1%; white-space: nowrap; }
+
+	table[type=horizontal] tr td[type='complete'],
+	table[type=horizontal] tr td[type='primary']
+	{
+		text-align: center
+	}
+
+	.fancyalert { width: 300px }
+	.fancyalert_title { font-family: Oswald, Arial, Helvetica, sans-serif; font-size: 25px; font-weight: 700; color: #000000; text-transform: uppercase }
+	.fancyalert_content { font-family: Roboto Condensed, Arial, Helvetica, sans-serif; font-size: 14px; color: #000000 }
+
+
+	#loader, #loading {
+		position: fixed;
+		left: 0px;
+		top: 0px;
+		width: 100%;
+		height: 100%;
+		z-index: 9999;
+		background-color: #ffffff;
+		background: url(/cs/images/loaders/gears.gif) center no-repeat #fff;
+	}
+
+	#loader div {
+		position: relative;
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+		width: 400px;
+
+		top: 50%;
+		-webkit-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
+  	}
+
+	#process {
+		display: none;
+	}
+
+	#processtable {
+		width: 100%;
+		background-color: #f2f2f2;
+		padding: 10px;
+		border-radius: 5px;
+		box-shadow: 5px 5px 5px #aaaaaa;
+		border: 1px solid #cccccc;
+	}
+
+	#processtitle {
+		padding: 8px;
+		background-color: #ffffff;
+		border: 1px solid #bbbbbb;
+		border-radius: 5px;
+		text-transform: uppercase;
+		font-family: Oswald, Arial, Helvetica, sans-serif;
+		font-size: 14px;
+	}
+
+	#processmessage {
+		padding: 12px;
+		font-family: Roboto Condensed, Arial, Helvetica, sans-serif;
+		font-size: 12px;
+	}
+
+	#processpercentage {
+		background-color: #990000;
+		padding: 2px;
+		width: 0%;
+		color: #ffffff;
+		font-family: Roboto Condensed, Arial, Helvetica, sans-serif;
+		font-size: 9px;
+		border-radius: 5px; 
+	}
+
+	.input_label { font-family: Roboto Condensed, Arial, Helvetica, sans-serif; font-size: 9px; color: #aaaaaa }
+
+	td.invalid {
+		background-color: #cc9999 !important;
+		color: #ffffff !important;
+	}
+
+	td.csinfo_label {
+		white-space: nowrap;
+		padding: 10px;
+		font-family: Roboto Condensed, Arial, Helvetica, sans-serif;
+		font-size: 14px;
+		color: #000000;
+		text-align: right;
+	}
+
+	td.csinfo {
+		padding: 3px;
+		font-family: Oswald, Arial, Helvetica, sans-serif;
+		font-size: 10px;
+		color: #000000;
+	}
+
+	td.csinfo_field input[type=text] {
+		cursor: pointer;
+	}
+
+	td.csinfo_field input[type=text], td.csinfo_field {
+		padding: 3px;
+		border: 0px;
+		font-family: Roboto Condensed, Arial, Helvetica, sans-serif;
+		font-size: 20px;
+		color: #000000;
+		width: 125px;
+		white-space: nowrap;
+	}
+
+	.csuiform[type=text] {
+		padding: 8px;
+		border: 1px solid #ccc;
+		font-size: 12px;
+		color: #000000;
+		width: 100%;
+	}
+
+	td.csui_disabled {
+		background-color: #eeeeee !important;
+		color: #999999 !important;
+	}
+
+	img[itype=library], img[itype=reviewlibrary] {
+		cursor: pointer
+	}
+
+	td[expired=true] {
+		background-color: #efd4d4 !important;
+/* 		background: url(/cs/images/icons/red/small/hourglass.png) 2px center no-repeat; */
+/* 		padding-left: 20px; */
+	}
+
+	span[primary=false], span[appl=false] {
+		font-family: Roboto Condensed, Arial, Helvetica, sans-serif;
+		font-size: 14px;
+		color: #ffffff;
+		background-color: #aaaaaa;
+		padding: 5px;
+		padding-left: 10px;
+		padding-right: 10px;
+		border-radius: 5px;
+		cursor: pointer;
+		text-align: center;
+		display: block;
+		width: 100px;
+	}
+
+	span[primary=true], span[appl=true] {
+		font-family: Roboto Condensed, Arial, Helvetica, sans-serif;
+		font-size: 14px;
+		color: #ffffff;
+		background-color: #669966;
+		padding: 5px;
+		padding-left: 10px;
+		padding-right: 10px;
+		border-radius: 5px;
+		cursor: pointer;
+		text-align: center;
+		display: block;
+		width: 100px;
+	}
+
+	div.csuisub_title { padding: 2px; font-family: Oswald, Arial, Helvetica, sans-serif; font-size: 18px; font-weight: 700; text-transform: uppercase; vertical-align: top; color: #555555 }
+
+	div.csuisub_label { padding: 6px; font-family: Roboto Condensed, Arial, Helvetica, sans-serif; font-size: 11px; background-color: #eeeeee; text-transform: uppercase }
+
+	.error_title { font-family: Roboto Condensed, Arial, Helvetica, sans-serif; font-size: 30px; color: #990000 }
+	.error_description { font-family: Oswald, Arial, Helvetica, sans-serif; font-size: 30px; color: #000000 }
+
+	.csui_label[datatype=external] {
+		color: #808080 !important;
+	}
+
+	.csui_field[datatype=external] {
+		background-color: #f7f7f7 !important;
+		color: #808080 !important;
+	}
+
+	table.psearch { width: 90%; margin-right: auto; margin-left: auto }
+	.psearch_highlight { font-family: Oswald, Arial, Helvetica, sans-serif; font-size: 25px; text-transform: uppercase; background-color: #ffffff; padding-top: 15px; color: blue; text-decoration: none }
+	.psearch_data { font-family: Roboto Condensed, Arial, Helvetica, sans-serif; font-size: 12px; background-color: #ffffff; padding-bottom: 15px; border-bottom: 1px solid #cccccc }
+	.psearch_stats { font-family: Oswald, Arial, Helvetica, sans-serif; color: #ffffff; background-color: #cccccc; border-bottom: 1px solid #cccccc; font-size: 15px; text-transform: uppercase; padding: 10px; padding-top: 25px; text-align: right }
+	.psearch_title { font-family: Oswald, Arial, Helvetica, sans-serif; color: #ffffff; background-color: #cccccc; border-bottom: 1px solid #cccccc; font-size: 35px; text-transform: uppercase; padding: 10px; padding-top: 25px; text-align: left; font-weight: bold }
+	.psearch_addl { font-family: Oswald, Arial, Helvetica, sans-serif; color: #aaaaaa; font-size: 15px; }
+	.psearch_pagination a { font-family: Oswald, Arial, Helvetica, sans-serif; font-size: 14px; color: #000000; text-decoration: none; line-height: 20px; }
+	.psearch_pagination a.pageindex-current { font-family: Oswald, Arial, Helvetica, sans-serif; font-size: 18px; color: #000000; font-weight: bold; text-decoration: none; line-height: 20px; }
+	td.psearch_tabs { font-family: Oswald, Arial, Helvetica, sans-serif; color: #000000; font-size: 15px; text-transform: uppercase; padding: 10px 30px; text-align: left; width: 1%; white-space: nowrap }
+	td.psearch_tabs_current { font-family: Oswald, Arial, Helvetica, sans-serif; background-color: #eeeeee; color: #000000; border-top: 1px solid #cccccc; border-left: 1px solid #cccccc; border-right: 1px solid #cccccc; font-size: 25px; text-transform: uppercase; padding: 10px 30px; text-align: left; font-weight: bold; width: 1%; white-space: nowrap }
+	td.psearch_tabs a { color: #bbbbbb; text-decoration: none }
+	td.psearch_tabs a:hover { color: #000000; text-decoration: none }
+	td.psearch_tabs_current a { color: #000000; text-decoration: none }
+	td.psearch_info { font-family: Oswald, Arial, Helvetica, sans-serif; color: #000000; font-size: 15px; text-transform: uppercase; padding: 10px 30px; text-align: right; }
+	table.psearch_tabs { border-bottom: 1px solid #cccccc; padding-top: 25px; width: 90%; margin-right: auto; margin-left: auto; }
+
+	#csuimessage {
+		padding: 10px;
+		background-color: #990000;
+		color: #ffffff;
+		display: none;
+		font-family: Roboto, Arial, sans-serif;
+		font-size: 11px;
+	}
+
+	.csuimessage_title {
+		padding-bottom: 10px;
+		color: #ffffff;
+		font-family: Roboto, Arial, sans-serif;
+		font-size: 14px;
+	}
+
+
+
+
+

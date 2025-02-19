@@ -1,0 +1,222 @@
+{
+    "alert": "hold",
+    "subtitle": 10045,
+    "groups": [
+        {
+            "obj": [
+                {
+                    "field": "Id",
+                    "alert": "",
+                    "link": "",
+                    "id": 1,
+                    "type": "Number",
+                    "itype": "currency",
+                    "value": "10045.20",
+                    "required": "Y",
+                    "order": 1,
+                    "group": "LAND DETAILS"
+                },
+                {
+                    "field": "Description",
+                    "alert": "",
+                    "link": "",
+                    "id": 2,
+                    "type": "String",
+                    "itype":"checkbox",
+                    "value": "BEVERLY HILLS    LOT   1 BLK70",
+                    "text":"This is a test",
+                    "required": "Y",
+                    "order": 2,
+                    "placeholder": "Description",
+                    "group": "LAND DETAILS"
+                },
+                {
+                    "field": "Address",
+                    "alert": "",
+                    "link": "",
+                    "id": 3,
+                    "type": "String",
+                    "value": "801 N RODEO DR",
+                    "required": "Y",
+                    "order": 3,
+                    "group": "LAND DETAILS"
+                },
+                {
+                    "field": "City",
+                    "alert": "",
+                    "link": "",
+                    "id": 4,
+                    "type": "String",
+                    "value": "BEVERLY HILLS",
+                    "required": "Y",
+                    "order": 4,
+                    "group": "LAND DETAILS"
+                },
+                {
+                    "field": "Phone",
+                    "alert": "",
+                    "link": "",
+                    "id": 5,
+                    "type": "String",
+                    "itype":"phone",
+                    "value": "",
+                    "required": "Y",
+                    "order": 5,
+                    "group": "LAND DETAILS"
+                },
+                {
+                    "field": "State",
+                    "alert": "",
+                    "link": "",
+                    "id": 6,
+                    "type": "String",
+                    "itype": "file",
+                    "value": "CA",
+                    "required": "Y",
+                    "order": 6,
+                    "group": "LAND DETAILS"
+                },
+                {
+                    "field": "Zip",
+                    "alert": "",
+                    "link": "",
+                    "id": 7,
+                    "type": "String",
+                    "value": "90210",
+                    "required": "Y",
+                    "order": 7,
+                    "group": "LAND DETAILS"
+                },
+                {
+                    "field": "Created Date",
+                    "alert": "",
+                    "link": "",
+                    "id": 8,
+                    "type": "Date",
+                    "itype": "datetime",
+                    "value": "2003-07-25 15:59:25.0",
+                    "required": "Y",
+                    "order": 8,
+                    "group": "LAND DETAILS"
+                },
+                {
+                    "field": "Updated Date",
+                    "alert": "",
+                    "link": "",
+                    "id": 9,
+                    "type": "Date",
+                    "itype": "date",
+                    "value": "2003-07-25 15:59:25.0",
+                    "required": "Y",
+                    "order": 9,
+                    "group": "LAND DETAILS"
+                },
+                {
+                    "field": "Primary",
+                    "alert": "",
+                    "link": "",
+                    "id": 10,
+                    "type": "boolean",
+                    "itype": "boolean",
+                    "value": "Y",
+                    "required": "Y",
+                    "order": 10,
+                    "group": "LAND DETAILS"
+                },
+                {
+                    "field": "Active",
+                    "alert": "",
+                    "link": "",
+                    "id": 11,
+                    "type": "String",
+                    "itype": "String",
+                    "value": "Y",
+                    "required": "Y",
+                    "order": 11,
+                    "group": "LAND DETAILS",
+                    "choices": [
+                    	{ 
+                    		"value": "Y"
+                    	},
+                    	{ 
+                    		"value": "N"
+                    	},
+                    	{ 
+                    		"value": "Y"
+                    	},
+                    	{ 
+                    		"value": "Y"
+                    	},
+                    	{ 
+                    		"value": "Y"
+                    	},
+                    	{ 
+                    		"value": "Y"
+                    	},
+                    	{ 
+                    		"value": "Y"
+                    	},
+                    	{ 
+                    		"value": "Y"
+                    	},
+                    	{ 
+                    		"value": "Y"
+                    	},
+                    	{ 
+                    		"value": "Y"
+                    	},
+                    	{ 
+                    		"value": "Y"
+                    	},
+                    	{ 
+                    		"value": "Y"
+                    	},
+                    	{ 
+                    		"value": "Y"
+                    	},
+                    	{ 
+                    		"value": "Y"
+                    	},
+                    	{ 
+                    		"value": "Y"
+                    	},
+                    	{ 
+                    		"value": "Y"
+                    	},
+                    	{ 
+                    		"value": "Y"
+                    	},
+                    	{ 
+                    		"value": "Y"
+                    	},
+                    	{ 
+                    		"value": "Y"
+                    	},
+                    	{ 
+                    		"value": "Y"
+                    	}
+                    ]
+                },
+                {
+                    "field": "Json",
+                    "alert": "",
+                    "link": "",
+                    "id": 11,
+                    "type": "String",
+                    "itype": "multiselect",
+                    "value": "2",
+                    "required": "Y",
+                    "order": 11,
+                    "group": "LAND DETAILS",
+                    "json": "/cs/json/choices.json"
+                }
+            ],
+            "id": "34",
+            "pub": "Y",
+            "group": "LAND DETAILS"
+        }
+    ],
+    "id": 10045,
+    "title": "LAND",
+    "type": "L"
+}

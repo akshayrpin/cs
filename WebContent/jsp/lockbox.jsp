@@ -1,0 +1,458 @@
+<%@page import="cs.ui.CsUiTools"%>
+<%@page import="cs.search.GlobalSearch"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="alain.core.utils.Operator"%>
+<%@page import="cs.utils.ObjTables"%>
+<%@page import="csshared.vo.DataVO"%>
+<%@page import="cs.utils.Cart"%>
+<%@page import="csshared.vo.MessageVO"%>
+<%@page import="csshared.vo.ResponseVO"%>
+<%@page import="org.json.JSONObject"%>
+<%@page import="csshared.utils.CsConfig"%>
+<%@page import="csshared.vo.SubObjVO"%>
+<%@page import="alain.core.utils.Timekeeper"%>
+<%@page import="alain.core.utils.Config"%>
+<%@page import="csshared.vo.ToolsVO"%>
+<%@page import="cs.utils.RequestMapper"%>
+<%@page import="alain.core.utils.Logger"%>
+<%@page import="cs.agent.UiAgent"%>
+<%@page import="cs.utils.ObjUi"%>
+<%@page import="csshared.vo.ObjGroupVO"%>
+<%@page import="cs.common.ApiHandler"%>
+<%@page import="csshared.vo.TypeVO"%>
+<%@page import="csshared.vo.RequestVO"%>
+<%@page import="alain.core.utils.Cartographer"%>
+<%@page import="java.util.HashMap"%>
+<%
+
+
+	Cartographer map = new Cartographer(request,response,true);
+	String entity = map.getString(RequestMapper.entity);
+	String type = map.getString(RequestMapper.type);
+
+	String hold = map.getString("alert");
+	String reload=map.getString("reload","N");
+	RequestVO nav = new RequestVO();
+	nav.setEntity("lso");
+	nav.setToken(map.token());
+	nav.setIp(map.getRemoteIp());
+	nav.setType("lockbox");
+	nav.setRequest("exception");
+	//nav.setStartdate(startdate);
+	
+	//String streetlist = ApiHandler.post(CsConfig.getString("dropdownlist.streetlist"), "{}");
+	//System.out.println("#######"+streetlist);
+	//String streetfractionlist = ApiHandler.post(CsConfig.getString("dropdownlist.streetfractionlist"), "");
+	ResponseVO ro = ApiHandler.getResponseVO(nav);
+	TypeVO o = ro.getType();
+	int userid = GlobalSearch.userId(map.token(), map.getRemoteIp());
+
+	Timekeeper k = new Timekeeper();
+	System.out.println(k.getString("FULLDATE"));
+	if (map.equalsIgnoreCase("action", "Upload")) {
+		//RequestVO vo = RequestMapper.getSaveParkingPermit(map);
+		System.out.println("Entered upload #################"+map.getString("_reference"));
+		RequestVO vo = RequestMapper.getRequest(map);
+		
+		ro = ApiHandler.getResponseVO(vo);
+		System.out.println(ro.getProcessid()+"##############");
+		System.out.println(ro.getMessagecode());
+	}
+	
+	String lprocess= "xyzlockbox"+userid;
+
+	
+
+	
+	String title = o.getTitle();
+	String subtitle = o.getSubtitle();
+	String alert = o.getAlert();
+	ObjGroupVO[] g = o.getGroups();
+	ToolsVO tools = o.getTools();
+
+
+// 	TypeVO co = ApiHandler.getType(nav);
+// 	DataVO dvo = DataVO.toDataVO(co);
+	
+// 	SubObjVO[] status = new SubObjVO[0];
+// 	//if (Operator.equalsIgnoreCase(type, "activity") && typeid > 0) {
+// 	RequestVO stvo = nav.duplicate();
+// 	stvo.setType("activity");
+// 	stvo.setId("-1");
+// 	stvo.setRequest("status");
+// 	status = ApiHandler.getChoices(stvo);
+	//}
+
+	
+	
+%>
+<html>
+<head>
+
+	<title>City Smart</title>
+	<%= CsUiTools.getHTMLImports() %>
+	<link rel="stylesheet" type="text/css" href="<%=Config.fullcontexturl() %>/tools/datetimepicker/jquery.datetimepicker.css"/>
+	<link rel="stylesheet" type="text/css" href="<%=Config.fullcontexturl() %>/tools/chosen/chosen.css"/>
+	<link rel="stylesheet" type="text/css" href="<%=Config.fullcontexturl() %>/tools/toggleswitch/css/tinytools.toggleswitch.css"/>
+	<link href='<%=Config.fullcontexturl() %>/tools/alain/cs.ui.css' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" media="all" href="<%=Config.fullcontexturl() %>/tools/fancyapps/source/jquery.fancybox.css"/>
+	<link rel="stylesheet" type="text/css" href="<%=Config.fullcontexturl() %>/tools/sweetalert/dist/sweetalert.css">
+	
+
+	<style>
+		.csui_controls { visibility: hidden }
+	</style>
+	<script>
+	var entity = 'lso';
+	var type = '<%= type %>';
+	var typeid = '<%= 0 %>';
+	var fullcontexturl = '<%=Config.fullcontexturl()%>';
+		
+	</script>
+
+	<script type="text/javascript" src="<%=Config.fullcontexturl() %>/tools/alain/cs.tools.js"></script>
+	<script type="text/javascript" src="<%=Config.fullcontexturl() %>/tools/alain/cs.form.js"></script>
+	<script type="text/javascript" src="<%=Config.fullcontexturl() %>/tools/datetimepicker/jquery.datetimepicker.js"></script>
+	<script type="text/javascript" src="<%=Config.fullcontexturl() %>/tools/chosen/chosen.jquery.js"></script>
+	<script type="text/javascript" src="<%=Config.fullcontexturl() %>/tools/toggleswitch/tinytools.toggleswitch.js"></script>
+	<script type="text/javascript" src="<%= Config.fullcontexturl() %>/tools/alain/cs.autogrow.js"></script>
+	<script type="text/javascript" src="<%=Config.fullcontexturl() %>/tools/tinymce/js/tinymce/jquery.tinymce.min.js"></script>
+	<script type="text/javascript" src="<%=Config.fullcontexturl() %>/tools/tinymce/js/tinymce/tinymce.min.js"></script>
+	<script type="text/javascript" src="<%=Config.fullcontexturl() %>/tools/inputmask/dist/inputmask/inputmask.js"></script>
+	<script type="text/javascript" src="<%=Config.fullcontexturl() %>/tools/inputmask/dist/inputmask/jquery.inputmask.js"></script>
+	
+	
+ 	<script type="text/javascript" src="<%=Config.fullcontexturl() %>/tools/fancyapps/source/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript" src="<%=Config.fullcontexturl() %>/tools/fancyapps/source/cms.fancybox.js"></script>
+    
+    <script type="text/javascript" src="<%=Config.fullcontexturl() %>/tools/sweetalert/dist/sweetalert-dev.js"></script>
+	<style>
+		
+	</style>
+
+	<script>
+		$(document).ready(function() {
+		
+			<%if(Operator.hasValue(lprocess)){%>
+				var response = JSON.parse('{"id":"<%=lprocess%>"}');
+				showProgress(response);
+				<%}%>
+			
+		
+		});
+		
+		
+		
+		function deletetype(id){
+			var method = "deletelockbox";
+			swal({  
+					title: "Are you sure?",   
+					text: "You want to delete this record!",   
+					type: "warning",   
+					showCancelButton: true,   
+					confirmButtonColor: "#DD6B55",   
+					confirmButtonText: "Yes, delete it!",   
+					cancelButtonText: "No, cancel plx!",   
+					closeOnConfirm: false,   
+					closeOnCancel: false 
+				}, 
+				function(isConfirm){   
+					if (isConfirm) {     
+						$.ajax({
+				   			  type: "POST",
+				   			  url: "../action.jsp?_act="+method,
+				   			  dataType: 'json',		  
+				   			  data: { 
+				   				// feesjson : type,
+				   			
+				   			      _grptype : "lockbox",
+				   			   	  _ent : "lso",
+				   			   	  _type : "lockbox",
+				   				  _typeid : 0,
+				   				  _id : id
+				   				
+				   			      //mode : mode
+				   			    },
+				   			    success: function(output) {
+				   			    		$('#tr_'+id).remove();
+				   			    		swal("Deleted!", "The record has been deleted.", "success");   
+				   			    		
+				   			    },
+				   		    error: function(data) {
+				   		    	swal("Problem while perfoming delete looks like the server is busy");  
+				   		    }
+			   			});		
+					
+					} 
+					else {    
+						swal("Cancelled", "The record is safe :)", "error");  
+					} 
+				});
+		}
+
+		function showProgress(response){
+			var reload = "<%=reload%>";
+			
+			if(reload=="N" || response.percentcomplete<100){
+				$('progress').show();
+				$('progress').val(response.percentcomplete);
+				$('#progress').html(response.processmessage);
+				pollForStatus(response);
+			}
+		}
+
+		function pollForStatus(response)
+		{
+			var userid = <%=userid%>;
+			var xyzlockbox= "xyzlockbox"+userid;
+			var method = 'pollstatus';
+			$.ajax({
+				type : 'POST',
+				url : '../../cs/action.jsp?_action='+method,
+				dataType : 'json',
+				data:{
+					_ent: 'lso',
+					_entid: -1,
+					_type: 'project',
+					_typeid: -1,
+					_grp: 'parking',
+					_grpid: xyzlockbox,
+						id: xyzlockbox,
+					_id: xyzlockbox,
+					_grptype: 'log/get',
+					_act: 'print'
+				},
+				success : function(response) {
+					$('progress').val(response.percentcomplete);
+					$('#progress').html(response.processmessage);
+					console.log("ss"+response.percentcomplete);
+					var kr = parseInt(response.percentcomplete);
+					console.log(kr+"ss"+response.percentcomplete);
+					if(kr < 100){ 
+						console.log("not good");
+						setTimeout(function() {
+							pollForStatus(response);
+						},  1000);
+					}
+					else {
+						
+						showswal(response.processmessage);
+						//resetlockbox();
+					}
+				},
+				error : function(error) {
+					console.log(error);
+					//alert('Your request was not processed. Please check your input data.');
+				}
+			});
+		}	
+		function resetlockbox(){
+			document.location.href = "lockbox.jsp?_ent=lso&_entid=-1&_type=lockbox&_typeid=0&_grptype=lockbox&reload=Y";
+			
+		}
+		
+		function showswal(msg){
+		
+			 setTimeout(function() {
+			        swal({
+			            title: "Results!",
+			            text: msg,
+			            
+			        }, function() {
+			        	$('progress').hide();
+						$('#progress').html("");
+						document.location.href = "lockbox.jsp?_ent=lso&_entid=-1&_type=lockbox&_typeid=0&_grptype=lockbox&reload=Y";
+			        });
+			    }, 1000);
+
+			
+			
+			
+			
+		}
+
+	</script>
+
+</head>
+<body alert="<%= alert %>">
+	<div id="loader">
+		<div id="process">
+			<table cellpadding="5" cellspacing="0" border="0" id="processtable">
+				<tr>
+					<td id="processtitle"></td>
+				</tr>
+				<tr>
+					<td id="processmessage"></td>
+				</tr>
+				<tr>
+					<td id="processpercent">
+						<table id="processpercentage"><tr><td></td></tr></table>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div id="csuicontrols">
+		<div id="csuicontrol" class="csuicontrol <%= alert %>">
+			<table cellpadding="0" cellspacing="0" border="0" width="100%">
+				<tr>
+					<td align="left" class="csuicontrol" >
+						<a href="parking.jsp?_ent=parking&_type=parking&_typeid=0&_id=0"><img src="/cs/images/icons/controls/white/back.png" height="25" width="25" border="0"/></a>
+					&nbsp; LOCKBOX PROCESS </td>
+					
+					
+				</tr>
+			</table>
+		</div>
+		
+	</div>
+	<div id="csuibody">
+		<div id="csuimain">
+			<div class="csuicontent">
+			<br/><br/>
+				
+				<%if(ro.getErrors().size()>0){ 
+					MessageVO m = ro.getErrors().get(0);
+				%><div id="csform_message" class="csform_error">
+					<ul>
+					<li class="error"><%=m.getMessage() %></li>
+					</ul>
+					</div>
+				<%}%>
+				<table class="csui_title" alert="warning">
+						<tr>
+							<td class="csui_title">
+								LOCKBOX PROCESS <a title="ADD Single" target="lightbox-iframe-refresh" href="lockboxadd.jsp?_ent=lso&_entid=-1&_type=lockbox&_id=0_typeid=0&PROCESS_ID=<%=lprocess %>&_grptype=lockbox&_act=lockbox"  >
+								<img src="<%=Config.fullcontexturl()%>/images/icons/controls/white/add.png" width="20" height="20" border="0"/></a> 
+							</td>
+								<td align="right" class="csuicontrol" >
+								
+							<a href="lockboxsearch.jsp?_ent=lso&_type=lockbox&_typeid=0&_id=0"><img src="/cs/images/icons/controls/white/search.png" height="20" width="20" border="0"/></a>
+						</td>
+							
+						</tr>
+				</table>
+				
+				<form id="csform" class="form"  action="lockbox.jsp" method="post" ajax="no"  refresh="true" enctype="multipart/form-data">
+				<input type="hidden" name="_ent" value="lso">
+				<input type="hidden" name="_type" value="lockbox">
+				<input type="hidden" name="_grpid" value="lockbox">
+				<input type="hidden" name="_grp" value="lockbox">
+				<input type="hidden" name="_grptype" value="lockbox">
+				<input type="hidden" name="_id" value="0">
+				<input type="hidden" name="_act" value="process">
+				<input type="hidden" name="_request" value="process">
+				
+				<input type="hidden" name="lprocess" id="lprocess"  value="">
+				<table class="csui" colnum="2" type="default">
+						
+					<tr>
+						<td class="csui_label" colnum="2" alert="">BATCH ID <font color="red">*</font></td>
+						<td class="csui" colnum="2" type="String" itype="String" alert="" colspan="4">
+						<input name="_ref" id="_ref" type="text" itype="String" valrequired="true"  ></td>
+					</tr>
+					<tr>
+						<td class="csui_label" colnum="2" alert="">UPLOAD FILE <font color="red">*</font></td>
+						<td class="csui" colnum="2" type="file" itype="file" alert="">
+						<input name="_reference" id="_reference" type="file" itype="file" valrequired="true"  ></td>
+						<td class="csui" colnum="2" type="DATE" itype="DATE" alert="">
+							<input name="action" type="submit"  value="UPLOAD" class="csui_button" >
+						</td>
+					</tr>
+					
+				</table>
+				
+				<div class="csui_divider"></div>
+				</form>
+				
+				<div class="csui_divider"></div>
+				<div class="csui_divider"></div>
+				<div id="progress"></div>
+				<progress style="display: none; width: 100%" id="progress" max="100" value="0"></progress>
+				<table class="csui_title" alert="warning">
+						<tr>
+							<td class="csui" colnum="2" type="DATE" itype="DATE" alert="" align="right">
+							<input name="reload" id="reload" type="submit" onclick="resetlockbox();"  value="RELOAD" class="csui_button">
+						</td>
+							
+						</tr>
+				</table>
+				
+				<table class="csui_title" alert="warning">
+						<tr>
+							<td class="csui_title">
+								EXCEPTIONS 
+							</td>
+							
+						</tr>
+				</table>
+				
+				<table class="csui" type="horizontal">
+					<tr>
+						<!-- <td class="csui_header"><input type="checkbox" name="selectorall" id="selectorall" ></td> -->
+						<td class="csui_header">&nbsp;</td>
+						<td class="csui_header">BATCH ID</td>
+						<td class="csui_header">TRANSACTION NO</td>
+						<td class="csui_header">CHECK #</td>
+						<td class="csui_header">ACCOUNT NO</td>
+						<td class="csui_header">DAY TIME QTY</td>
+						<td class="csui_header">OVERNIGHT QTY</td>
+						
+						<td class="csui_header">PAYMENT AMOUNT</td>
+						<td class="csui_header">PROJECT ID</td>
+						<td class="csui_header">PAYEE ID</td>
+						
+						<td class="csui_header">DAY TIME PREV/CURR QTY</td>
+						<td class="csui_header">OVERNIGHT PREV/CURR QTY</td>
+						<td class="csui_header">UPDATED</td>
+						
+						<td class="csui_header" width="1%">&nbsp;</td>
+						<td class="csui_header" width="1%">&nbsp;</td>
+					</tr>
+				
+				  <% 
+				  			ArrayList<HashMap<String, String>> list = ro.getList();
+							for(int i=0;i<list.size();i++){
+								HashMap<String, String> l = list.get(i);
+								int ct = i+1;
+						%>
+						
+						<tr id="tr_<%=l.get("ID") %>">
+							<%-- <td class="csui"><input type="checkbox" name="selector" id="selector" class="selector" value="<%=og[i].getExtras().get("ID") %>"> </td> --%>
+							<td class="csui" type="String" itype="text"><%=ct %></td>
+							<td class="csui" type="String" itype="text"><%=l.get("BATCH_NUMBER") %></td>
+							<td class="csui" type="String" itype="text"><%=l.get("TRANSACTION_NUMBER") %></td>
+							<td class="csui" type="String" itype="text"><%=l.get("CHECK_NO") %></td>
+							<td class="csui" type="String" itype="text"><a href="/cs/summary.jsp?_ent=lso&_id=0&_type=project&_typeid=<%=l.get("PROJECT_ID") %>" target="lightbox-iframe"><%=l.get("ACCOUNT_NUMBER") %></a></td>
+							<td class="csui" type="String" itype="text"><%=l.get("DAYTIME_QTY") %></td>
+							<td class="csui" type="String" itype="text"><%=l.get("OVERNIGHT_QTY") %></td>
+							<td class="csui" type="String" itype="text">$<%=l.get("PAYMENT_AMOUNT") %></td>
+							<td class="csui" type="String" itype="text"><%=l.get("PROJECT_ID") %></td>
+							<td class="csui" type="String" itype="text"><%=l.get("PAYEE_ID") %></td>
+							<td class="csui" type="String" itype="text"><%=l.get("DAYTIME_PREV_QTY") %>/<%=l.get("DAYTIME_CURR_QTY") %></td>
+							<td class="csui" type="String" itype="text"><%=l.get("OVERNIGHT_PREV_QTY") %>/<%=l.get("OVERNIGHT_CURR_QTY") %></td>
+							<td class="csui" type="String" itype="text"><%=l.get("UPDATED_DATE") %></td>
+							
+							<td class="csui" >
+								
+							<a target="lightbox-iframe-refresh" href="lockboxedit.jsp?_ent=lso&_entid=-1&_type=project&_id=<%=l.get("ID") %>&_typeid=<%=l.get("ID") %>&_grptype=lockbox&_act=lockbox"  >
+								<img src="<%=Config.fullcontexturl()%>/images/icons/controls/black/edit.png" width="20" height="20" border="0"/></a>
+							</td>
+							<td class="csui" width="1%">
+								<a href="javascript:void(0);" target="" title="Delete" onclick="deletetype(<%=l.get("ID") %>);" ><img src="<%=Config.fullcontexturl()%>/images/icons/controls/black/delete.png" border="0"></a>
+							</td>
+							
+						</tr>
+					<% }  %>
+			
+			</div>
+		</div>
+		
+	</div>
+
+
+
+
+</body>
+</html>
+

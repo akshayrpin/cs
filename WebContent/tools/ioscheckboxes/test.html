@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>iOS Check Test</title>
+		<link rel="stylesheet" href="assets/css/mobileCheckbox.iOS.css" type="text/css"/>
+	</head>
+	<body>
+	
+		<h3>API Access</h3>
+		<input class="iOS5" type="checkbox" itype="libraryinspectable" name="checkbox_name" checked="checked">
+		<br />
+		<button name="offCheckbox" type="button">Checkbox Off</button>
+		<button name="onCheckbox" type="button">Checkbox On</button>
+		
+<!-- 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
+		<script src="../../tools/jquery.min.js"></script>
+		<script src="assets/js/jquery.mobileCheckbox.js" charset="utf-8"></script>
+		<script type="text/javascript">
+			$("input[itype=libraryinspectable]").mobileCheckbox({
+				checkedText: "YES", 
+				uncheckedText: "NO",
+				textMargin: 10, 
+				checkMargin: 10
+			});
+			/* The above wouldn't work if this target all checkboxes was first */
+			$("input[itype=libraryinspectable]").mobileCheckbox();
+			
+			/* API */
+			$("button[name='onCheckbox']").on('click',function(e){
+				var self = $(this);
+				$("input[data-id='toggleCheckbox']").mobileCheckbox("checked", true);
+			});
+			
+			$("button[name='offCheckbox']").on('click',function(e){
+				var self = $(this);
+				$("input[data-id='toggleCheckbox']").mobileCheckbox("checked", false);
+			});
+		</script>
+	</body>
+</html>

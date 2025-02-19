@@ -1,0 +1,200 @@
+<!doctype html>
+<html>
+<head>
+    <title>Look and Feel</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0" />
+
+    <!-- Examples CSS (Not needed) -->
+    <link href="../css/zozo.examples.min.css" rel="stylesheet" />
+
+    <!-- Zozo Accordion css -->
+    <link href="../css/zozo.accordion.min.css" rel="stylesheet">
+
+    <!-- Zozo Accordion js -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/zozo.accordion.min.js"></script>
+</head>
+<body>
+    <div id="ribbon"></div>
+    <div id="page">
+        <div id="example">
+            <a class="z-btn z-back" href="index.html">Back</a>
+
+            <div id="animation">
+                <ul id="demo-accordion">
+                    <li>
+                        <h3>Overview </h3>
+                        <div>
+                            <p><strong>Slick Design</strong> and Limitless Customization</p>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>Some of it's key features </h3>
+                        <div>
+                            <ul>   
+                                <li>Responsive &amp; touch-friendly </li>
+                                <li>Horizontal &amp; vertical accordion </li>
+                                <li>Load content with AJAX</li>
+                                <li>accordion slider with images</li>
+                                <li>CSS3 transitions with fallback (superfast on mobile & tablet)</li>  
+                                <li>Semantic HTML5 &amp; SEO friendly </li>   
+                                <li>Keyboard navigation &amp; WAI-ARIA support </li>
+                                <li>10 unique skins, nested &amp; multiple instances </li>
+                                <li>Free updates &amp; support </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>Documentation</h3>
+                        <div>
+                            <p>Fully documented and step-by-step guide provided to help you get up and running with Zozo Accordion.</p>
+                            <p>Documentation can be found on<a href="http://docs.zozoui.com/accordion">docs.zozoui.com/accordion</a>.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>10+ Preset themes </h3>
+                        <div>
+                            <ul>
+                                <li>white</li>
+                                <li>crystal</li>
+                                <li>silver</li>
+                                <li>gray</li>
+                                <li>black</li>
+                                <li>orange</li>
+                                <li>red</li>
+                                <li>green</li>
+                                <li>yellow</li>
+                                <li>purple</li>
+                                <li>blue</li>
+                                <li>lightblue</li>
+                                <li>deepblue</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>Purchase</h3>
+                        <div>
+                            <p><a href="http://codecanyon.net/item/zozo-tabs/3327836?ref=ZozoUI">Get Zozo Accordion from CodeCanyon.net</a></p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="config-wrapper">
+                <div id="config" class="switcher" style="display: block;">
+                    <div class="config-title">Look and Feel</div>
+                    <div class="content">
+                        <div class="box-title">Themes</div>
+                        <div class="switcher-box theme medium" data-option="theme">
+                            <a data-value="white" class="styleswitch color white"><span></span></a>
+                            <a data-value="crystal" class="styleswitch color crystal"><span></span></a>
+                            <a data-value="silver" class="styleswitch color silver active"><span></span></a>
+                            <a data-value="gray" class="styleswitch color gray"><span></span></a>
+                            <a data-value="black" class="styleswitch color black"><span></span></a>
+                            <a data-value="orange" class="styleswitch color orange"><span></span></a>
+                            <a data-value="red" class="styleswitch color red"><span></span></a>
+                            <a data-value="green" class="styleswitch color green"><span></span></a>
+                            <a data-value="yellow" class="styleswitch color yellow"><span></span></a>
+                            <a data-value="purple" class="styleswitch color purple"><span></span></a>
+                            <a data-value="blue" class="styleswitch color blue"><span></span></a>
+                            <a data-value="lightblue" class="styleswitch color lightblue"><span></span></a>
+                            <a data-value="deepblue" class="styleswitch color deepblue"><span></span></a>
+                        </div>
+                        <ul class="options">
+                            <li>
+                                <input id="slider1" type="range" min="0" max="50" step="1" value="2" style="width: 95%; display: none;">
+                                <input id="spacing" type="text" size="1" value="4" style="width: 40px; margin-left: 4px;">
+                                <label for="spacing">SectionSpacing</label>
+                            </li>
+                            <li>
+                                <input id="headerSize" type="text" size="1" value="38" style="width: 40px; margin-left: 4px;">
+                                <label for="headerSize">headerSize</label>
+                            </li>
+                            <li>
+                                <input id="bordered" type="checkbox" checked="checked" />
+                                <label for="bordered">Bordered</label>
+                            </li>
+
+                            <li>
+                                <input id="shadows" type="checkbox" checked="checked" />
+                                <label for="shadows">Shadows (css3)</label>
+                            </li>
+                            <li>
+                                <input id="rounded" type="checkbox" checked="checked" />
+                                <label for="rounded">Rounded (css3)</label>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <style>
+        #animation {
+            width: 520px;
+            padding: 0px 15px 0 15px;
+            float: left;
+        }
+
+        #config-wrapper {
+            float: left;
+            width: 300px;
+            margin: 5px 20px;
+        }
+
+        .medium.switcher-box .styleswitch span {
+            width: 40px;
+            height: 40px;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function () {
+            var accordion = $("#demo-accordion").zozoAccordion({
+                theme: "silver",
+                active: 1,
+                rounded: true,
+                    headerSize: 38,
+                    sectionSpacing: 6
+                
+            });
+
+
+            $(".switcher-box a").bind("click", function (e) {
+                e.preventDefault();
+                $(this).addClass("active").parent().find("a").not($(this)).removeClass("active");
+                accordion.data('zozoAccordion').setOptions({ "theme": $(this).attr("data-value") }, false);
+            });
+
+            $("#bordered").change(function () {
+                var bordered = $(this).is(':checked');
+                accordion.data('zozoAccordion').setOptions({ "bordered": bordered }, false);
+            });
+
+            $("#shadows").change(function () {
+                var shadows = $(this).is(':checked');
+                accordion.data('zozoAccordion').setOptions({ "shadows": shadows }, false);
+            });
+
+            $("#rounded").change(function () {
+                var rouned = $(this).is(':checked');
+                accordion.data('zozoAccordion').setOptions({ "rounded": rouned }, false);
+            });
+
+            $("#spacing").change(function () {
+                var spacing = $(this).val();
+                accordion.data('zozoAccordion').setOptions({ sectionSpacing: parseInt(spacing) });
+            });
+
+            $("#headerSize").change(function () {
+                var headerSize = $(this).val();
+                accordion.data('zozoAccordion').setOptions({ vertical: { headerSize: parseInt(headerSize) } }, false);
+            });
+        });
+    </script>
+</body>
+</html>

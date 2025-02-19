@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>jTumbler 1.0.4 – jQuery Plugin</title>
+<style type="text/css">
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #333;
+  padding: 20px;
+}
+h1 {
+  font-weight: lighter;
+  color: #000;
+  font-size: 35px;
+}
+h2 {
+  font-weight: lighter;
+  color: #069;
+  font-size: 30px;
+}
+h3 {
+  font-size: 20px;
+    color: #046;
+}
+h4 {
+    font-size: 16px;
+}
+a {
+  color: #09C;
+}
+pre {
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 14px;
+  font-weight: normal;
+  padding: 8px;
+  border: 1px dashed #CCC;
+}
+.doc th {
+  background-color: #EFEFEF;
+  text-align: left;
+  vertical-align: middle;
+  text-shadow: 0 1px 0 #fff;
+}
+.doc td {
+  vertical-align: top;
+}
+.doc th, .doc td {
+  padding: 7px;
+  border-bottom: 1px solid #e0e0e0;
+  border-right: 1px solid #e0e0e0;
+}
+.doc tr:last-child td {
+  border-bottom: none;
+}
+.doc tr td:last-child, tr th:last-child {
+  border-right: none;
+}
+.doc tr:hover td {
+  background-color: #f0f0f0;
+  text-shadow: 0 1px 0 #fff;
+}
+
+table.doc {
+  border: 1px solid #ddd;
+}
+.tips li {
+  padding-bottom: 15px;
+}
+.features li {
+  padding-bottom: 4px;
+}
+#page {
+  max-width: 1100px;
+  margin: auto;
+}
+.code-highlight {
+  color: #06C;
+}
+</style>
+</head>
+
+<body>
+<div id="page">
+<h1>jTumbler jQuery Plugin</h1>
+<h2>Table of Contents</h2>
+<ol class="contents">
+  <li><a href="#about-the-plugin">About the Plugin</a></li>
+  <li><a href="#features">Features</a></li>
+  <li><a href="#whats-included">What's Included</a></li>
+  <li><a href="#quick-start">Quick Start</a></li>
+  <li><a href="#installation">Installation</a></li>
+  <li><a href="#usage">Using jTumbler</a></li>
+  <li><a href="#configuration-options">Configuration Options</a></li>
+  <li><a href="#methods">Methods</a></li>
+  <li><a href="#support">Support</a></li>
+</ol>
+<h2 id="about-the-plugin">About the Plugin</h2>
+<p><strong>jTumbler transforms your boring, old radio buttons into beautiful, slider-style selection boxes.</strong></p>
+<p>Simply supply a group of radio buttons and labels inside of a container (such as a DIV), call the jTumbler plugin on the container, and jTumbler takes care of the rest. You may also provide a callback function to perform an operation each time a jTumbler button is clicked. The jTumbler jQuery plugin is an excellent way to enhance the usability of your website and give your visitors an easy, user-friendly experience.</p>
+<h2 id="features">Features</h2>
+<ul>
+  <li>Create Beautiful and Stylish Radio Buttons<br /></li>
+  <li>Extremely Easy To Set Up and Use<br /></li>
+  <li>Lightweight jQuery Plugin<br /></li>
+  <li>Unobtrusive Script &amp; Simple to Setup<br /></li>
+  <li>Compatible with All Modern Browsers<br /></li>
+  <li>Easy to Integrate with Popular CMS's</li>
+</ul>
+<h2 id="whats-included">What's Included</h2>
+<ul>
+  <li>jTumbler Script (full source and minified)</li>
+  <li>jQuery 1.11</li>
+  <li>jTumbler CSS file for default styles</li>
+  <li>Easy to follow Quick Start Guide</li>
+  <li>Comprehensive Documentation</li>
+  <li>Demo</li>
+  <li>Excellent Customer Support</li>
+</ul>
+<h2 id="quick-start">Quick Start</h2>
+<p>It takes very little time to get started with jTumbler; simply follow the four steps below. For more information about any of these steps, read the sections that follow.</p>
+<p>To add jTumbler to a page, follow these four steps:</p>
+<ol>
+  <li>Download the zip archive, extract the jTumbler script, jQuery, and jTumbler CSS files. Upload these files to the corresponding directories on your server.<br /><br /></li>
+  <li>If you already have jQuery installed, just be sure you are using the latest version (jTumbler requires jQuery version 1.11 or higher). Otherwise, you can find jQuery 1.11 in the &quot;js/&quot; directory of the jTumbler zip archive.<br /><br />
+  </li>
+  <li>Use the lines of code below to add jQuery 1.11, the jTumbler script, and the jTumbler stylesheet to your page. These lines usually go in the &lt;head&gt;…&lt;/head&gt; tag.<br />
+<pre>&lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery-1.11.1.min.js&quot;&gt;&lt;/script&gt;<br />&lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery-jtumbler-1.0.4.min.js&quot;&gt;&lt;/script&gt;<br />&lt;link rel=&quot;stylesheet&quot; href=&quot;css/jtumbler.css&quot; /&gt;</pre>
+  </li>
+  <li>Use the following code to initialize jTumbler. Your radio buttons should be inside of a containing element (such as a DIV) and each one should have a corresponding label element. Call the jTumbler plugin on the element containing your radio buttons.<br />
+
+<pre>&lt;script type=&quot;text/javascript&quot;&gt;<br />     jQuery(function($){<br />         $('.button-group').jTumbler();<br />     });<br />&lt;/script&gt;</pre>
+  </li>
+</ol>
+<h2 id="installation">Installation</h2>
+To install jTumbler, follow the steps below. <strong>All of the code in this section should appear in the &lt;head&gt;…&lt;/head&gt; portion of the page.</strong>
+<ol>
+  <li>Download the zip archive and extract the contents onto your local computer (ex: onto your desktop). Upload the contents of the &quot;js&quot; folder to your website's JavaScript directory, and the contents of the &quot;css&quot; folder to your website's CSS directory.<br /><br /></li>
+  <li>If you already have jQuery installed, you may skip this step. If not, add jQuery by inserting this line into the page on which you want jTumbler to appear:
+<pre>
+&lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery-1.11.1.min.js&quot;&gt;&lt;/script&gt;</pre>
+  </li>
+  <li>Add the jTumbler script to the page by inserting the following line after the jQuery line:
+<pre>
+&lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery-jtumbler-1.0.4.min.js&quot;&gt;&lt;/script&gt;</pre>
+  </li>
+  <li>Add the jTumbler CSS stylesheet to the page by inserting this line:
+<pre>
+&lt;link rel=&quot;stylesheet&quot; href=&quot;css/jtumbler.css&quot; /&gt;</pre>
+  </li>
+</ol>
+<p>All together:</p>
+<pre>&lt;head&gt;<br />    ...<br />    &lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery-1.11.1.min.js&quot;&gt;&lt;/script&gt;<br />    &lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery-jtumbler-1.0.4.min.js&quot;&gt;&lt;/script&gt;<br />    &lt;link rel=&quot;stylesheet&quot; href=&quot;css/jtumbler.css&quot; /&gt;<br />    ...<br />&lt;/head&gt;</pre>
+<h2 id="usage">Using jTumbler</h2>
+<p>It takes one line of JavaScript to use jTumbler. Simply select your radio button container and call the jTumbler plugin on it:</p>
+<pre>&lt;script type=&quot;text/javascript&quot;&gt;<br /> jQuery(function($){<br />     $('.button-group').jTumbler();<br /> });<br />&lt;/script&gt;</pre>
+<p>Your radio buttons should be grouped inside of a containing element, such as a DIV, and have corresponding labels. For example:</p>
+<pre>&lt;div class=&quot;button-group&quot;&gt;<br />  &lt;input type=&quot;radio&quot; name=&quot;options[qa]&quot; value=&quot;no&quot; id=&quot;no-qa&quot;&gt;<br />  &lt;label for=&quot;no-qa&quot;&gt;No QA&lt;/label&gt;<br /><br />  &lt;input type=&quot;radio&quot; name=&quot;options[qa]&quot; value=&quot;standard&quot; id=&quot;standard-qa&quot; checked=&quot;true&quot;&gt;<br />  &lt;label for=&quot;standard-qa&quot;&gt;Standard QA&lt;/label&gt;<br /><br />  &lt;input type=&quot;radio&quot; name=&quot;options[qa]&quot; value=&quot;middle&quot; id=&quot;middle-qa&quot;&gt;<br />  &lt;label for=&quot;middle-qa&quot;&gt;Middle QA&lt;/label&gt;<br /><br />  &lt;input type=&quot;radio&quot; name=&quot;options[qa]&quot; value=&quot;full&quot; id=&quot;full-qa&quot;&gt;<br />  &lt;label for=&quot;full-qa&quot;&gt;Full QA&lt;/label&gt;<br />&lt;/div&gt;</pre>
+<p><strong>Demo:</strong> <a href="../demo/index.html">jTumbler Demo</a></p>
+<h2 id="configuration-options">Methods</h2>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="doc">
+  <tr>
+    <th>Method Name</th>
+    <th>Return Value</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>onSwitch</td>
+    <td>null</td>
+    <td>
+        <p>A reference to a callback function that is called when a radio button is clicked.</p>
+        <p>For example:<p/>
+        <pre>&lt;script type=&quot;text/javascript&quot;&gt;<br /> jQuery(function($){<br />     $('.button-group').jTumbler({<br />          onSwitch: function(currentValue, previousValue) { alert("currentValue: " + value + ", previousValue: " + previousValue); }<br />     });<br /> });<br />&lt;/script&gt;</pre>
+    </td>
+  </tr>
+  <tr>
+    <td>getChecked</td>
+    <td>jQuery Object</td>
+    <td>
+        <p>Returns checked radio button input jQuery object.</p>
+    </td>
+  </tr>
+</table>
+<h2 id="support">Support</h2>
+<p>jTumbler is fully supported by w3Blender. Support can be obtained by posting a comment to the jTumbler CodeCanyon page, by emailing w3Blender at <a href="mailto:support@w3blender.com">support@w3Blender.com</a>, or by going to the <a href="http://www.w3blender.com">w3Blender.com</a> home page and clicking &quot;Live Chat&quot;.</p>
+<p>&nbsp;</p>
+</div>
+</body>
+</html>

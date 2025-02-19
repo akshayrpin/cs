@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+
+	<rooturl>http://localhost:8080</rooturl>
+	<securerooturl>https://cs</securerooturl>
+	<contextroot>cs</contextroot>
+	<logourl>/_contextroot/images/BHLogo.gif</logourl>
+	<servlet_url_pattern>/alain</servlet_url_pattern>
+
+
+	<connectioncheck>Y</connectioncheck>
+	<connectionfilepath>c:/Temp/Sage/</connectionfilepath>
+		<comcate>N</comcate>
+	
+	<resources>
+	   <imageurl>_rooturl/resources/image/</imageurl>
+	   <soundurl>_rooturl/resources/sound/</soundurl>
+	   <videourl>_rooturl/resources/video/</videourl>
+	   <imagedir>C:/resources/image/</imagedir>
+	   <sounddir>C:/resources/sound/</sounddir>
+	   <videodir>C:/resources/video/</videodir>	
+	</resources>
+	
+	<attractions>
+	   <imagewidth>300</imagewidth>
+	   <imageheight>300</imageheight>
+	</attractions>
+	<!-- Added 9/24/2010 -->
+	<stylesheet>/_contextroot/css/core.styles.css</stylesheet>
+
+	<!-- Environment information -->
+	<environment>
+		<webserver>tomcat</webserver>
+		<debug>DEBUG</debug>
+	</environment>
+
+	<!-- Added 9/16/2010 -->
+	<images>
+		<edit>/_contextroot/images/famfamfam/silk_icons/pencil.png</edit>
+		<copy>/_contextroot/images/famfamfam/silk_icons/application_double.png</copy>
+		<delete>/_contextroot/images/famfamfam/silk_icons/delete.png</delete>
+		<new>/_contextroot/images/famfamfam/silk_icons/add.png</new>
+		<up>/_contextroot/images/famfamfam/silk_icons/bullet_arrow_up.png</up>
+		<down>/_contextroot/images/famfamfam/silk_icons/bullet_arrow_down.png</down>
+		<arrow_right>/_contextroot/images/famfamfam/silk_icons/arrow_right.png</arrow_right>
+		<arrow_left>/_contextroot/images/famfamfam/silk_icons/arrow_left.png</arrow_left>
+		<empty>/_contextroot/images/space.gif</empty>
+		<storage>/_contextroot/images/</storage>
+		<files>
+			<default>_rooturl/_contextroot/images/icons/files/16x16/file.png</default>
+			<audio>_rooturl/_contextroot/images/icons/files/16x16/audio.png</audio>
+			<excel>_rooturl/_contextroot/images/icons/files/16x16/xls.png</excel>
+			<folder>_rooturl/_contextroot/images/icons/files/16x16/folder.png</folder>
+			<folders>_rooturl/_contextroot/images/icons/files/16x16/folders.png</folders>
+			<image>_rooturl/_contextroot/images/icons/files/16x16/image.png</image>
+			<link>_rooturl/_contextroot/images/icons/files/16x16/link.png</link>
+			<pdf>_rooturl/_contextroot/images/icons/files/16x16/pdf.png</pdf>
+			<powerpoint>_rooturl/_contextroot/images/icons/files/16x16/ppt.png</powerpoint>
+			<video>_rooturl/_contextroot/images/icons/files/16x16/video.png</video>
+			<word>_rooturl/_contextroot/images/icons/files/16x16/word.png</word>
+		</files>
+	</images>
+
+	<!-- Security settings -->
+	<security>
+
+		<safe_domains></safe_domains>
+		<login>
+			<logincss>/_contextroot/css/cms.login.css</logincss>
+			<forgoturl>/_contextroot/user/forgot.jsp</forgoturl>
+			<changepasswordurl></changepasswordurl>
+			<createaccounturl>/_contextroot/user/register.jsp</createaccounturl>
+			<usernamelabel>Email</usernamelabel>
+		</login>
+		<email>
+			<smtp>tsmprd</smtp>
+			<from>webmaster@beverlyhills.org</from>
+		</email>
+		<public_access>N</public_access>
+	
+		<!-- username and password for administrator -->
+		<administrator>
+			<username>CSDeveloper</username>
+			<password>CSDeveloper</password>
+			<email>aromero@beverlyhills.org</email>
+		</administrator>
+
+		<rest>
+			<datasource>csapi</datasource>
+			<url>http://localhost:8080/csapi/rest/users/login</url>
+			<username_field>USERNAME</username_field>
+			<password_field>PASSWORD</password_field>
+			<requestor>cs</requestor>
+			<preencrypt_aes_salt>cs</preencrypt_aes_salt>
+		</rest>
+		
+		
+		<!-- oauth2 -->
+		 <oauth2>
+		 	<perform>N</perform>
+
+		 	<url>https://idp.beverlyhills.org</url>
+			<client_id>upwy80i2bhgzpyf7zohilbms6cybtorl</client_id>
+			<client_secret>ICQEzIsCCcwpdhGEQcMiMcbiTEfLzUJj3jWgRmkT03ndCUfoUEDffbPGXPf4bbqX</client_secret>
+			<redirect_uri>http://localhost:8080/cs/idp</redirect_uri>
+			<scope>openid</scope>
+			<response_type>code</response_type>
+			<response_mode>form_post</response_mode>
+			<authorization_endpoint>/authorize</authorization_endpoint>
+			<token_endpoint>/token</token_endpoint>
+			<userinfo_endpoint>/userinfo</userinfo_endpoint>
+			<introspect_endpoint>/introspect</introspect_endpoint>
+			<end_session_endpoint>/logout</end_session_endpoint>
+			<post_logout_redirect_uri>http://localhost:8080/cs/</post_logout_redirect_uri>
+			
+		</oauth2> 
+		
+	</security>
+
+	<!-- database where information about users can be found -->
+	<user>
+		<information>
+			<datasource>cstest</datasource>
+			<table>USERS</table>
+			<fields>
+				<id>ID</id>
+				<username>USERNAME</username>
+				<email>EMAIL</email>
+				<last_name>LAST_NAME</last_name>
+				<first_name>FIRST_NAME</first_name>
+				<filetoken>FILETOKEN</filetoken>
+			</fields>
+		</information>
+	<!-- 	
+		<token> -->
+<!-- 			<file>Y</file> -->
+<!-- 			<filepath>C:/TEMP/tokens/</filepath> -->
+<!-- 			<timeout>-1</timeout> -->
+<!-- 			<enc> -->
+<!-- 				<ft> -->
+<!-- 					<type>aes</type> -->
+<!-- 					<key>firsttek</key> -->
+<!-- 				</ft> -->
+<!-- 				<portal> -->
+<!-- 					<type>aes</type> -->
+<!-- 					<key>csportal</key> -->
+<!-- 				</portal> -->
+<!-- 			</enc> -->
+<!-- 		</token> -->
+
+		<token>
+			<filepath>C:/DL/csfiles/tokens/</filepath>
+			<timeout>1</timeout>
+		
+		</token>
+<!-- 
+		<rest>
+			<datasource>csapi</datasource>
+			<url>http://cs/csapi/rest/users/generatetoken</url>
+			<requestor>cs</requestor>
+		</rest>
+		-->
+	</user>
+
+
+	<!-- datasources available -->
+	<datasource>
+		<default>cstest</default>
+		<cs>
+			<jndi>jdbc/cs5</jndi>
+			<database>sqlserver</database>
+		</cs>
+		<cstrain>
+			<jndi>jdbc/cstrain5</jndi>
+			<database>sqlserver</database>
+		</cstrain>
+		<csdev>
+			<jndi>jdbc/csdev5</jndi>
+			<database>sqlserver</database>
+		</csdev>
+		<cstest>
+			<jndi>jdbc/cstest5</jndi>
+			<database>sqlserver</database>
+		</cstest>
+		<csconfig>
+			<jndi>jdbc/csconfig5</jndi>
+			<database>sqlserver</database>
+		</csconfig>
+		<csprod>
+			<jndi>jdbc/csprod5</jndi>
+			<database>sqlserver</database>
+		</csprod>
+		<bhweb>
+			<jndi>jdbc/bhwebtest5</jndi>
+			<database>sqlserver</database>
+		</bhweb>
+
+		<!-- <portal> <jndi>jdbc/unite5</jndi> <database>sqlserver</database> </portal> -->
+	</datasource>
+
+	<!-- Settings for caching retrieved files -->
+	<datacache>
+		<url>
+			<datasource>bhweb</datasource>
+			<table>URLCACHE</table>
+			<fields>
+				<url>URL</url>
+				<content>CONTENT</content>
+				<updated>UPDATED</updated>
+			</fields>
+		</url>
+	</datacache>
+
+	<!-- Settings and paths to directory where files exist. Primarily used in 
+		the alain.file.FileClerk class and the FileOut servlet -1539607552  52428800-->
+	<files>
+		<autosave>Y</autosave>
+	    <max_upload_size>500000000</max_upload_size>
+	    <storage_path>C:/DL/CHECK-OUT/</storage_path>
+		<storage_url>csfiles/storage/</storage_url>
+		<uploads_directory>files</uploads_directory>
+		<temp_path>C:/DL/csfiles/TEMP/</temp_path>
+	    <logs_path>C:/DL/csfiles/Logs/</logs_path>
+	    <templates_path>C:/DL/csfiles/Templates/</templates_path>
+	</files>
+	
+
+
+	<services>
+		<weather_com>
+			<partner_id>1131779444</partner_id>
+			<license_key>52d7697bc330d20f</license_key>
+			<icon_folder_url>/_contextroot/images/icons/weather</icon_folder_url>
+		</weather_com>
+	</services>
+
+	<tools>
+		<!-- <ext> <css>/_contextroot/tools/ext-3.3.0/resources/css/ext-all.css</css> 
+			<css>/_contextroot/css/core.icons.css</css> <js>/_contextroot/tools/ext-3.3.0/adapter/ext/ext-base.js</js> 
+			<debug>/_contextroot/tools/ext-3.3.0/ext-all-debug.js</debug> <blank_image_url>/_contextroot/tools/ext-3.3.0/resources/images/default/s.gif</blank_image_url> 
+			</ext> -->
+		<jquery>
+			<js>/_contextroot/tools/jquery/jquery-1.6.3.min.js</js>
+		</jquery>
+		<richtext>
+			<js>/_contextroot/tools/tinymce_3_4_3_2/jscripts/tiny_mce/tiny_mce.js</js>
+		</richtext>
+		<eventcalendar>
+			<css>/_contextroot/css/core.event-calendar.css</css>
+			<catalog_root>/_contextroot/events</catalog_root>
+		</eventcalendar>
+		<calendar>
+			<css>/_contextroot/tools/jscalendar/skins/cobh/theme.css</css>
+			<js>/_contextroot/tools/jscalendar/calendar.js</js>
+			<js>/_contextroot/tools/jscalendar/lang/calendar-en.js</js>
+			<js>/_contextroot/tools/jscalendar/calendar-setup.js</js>
+			<img>/_contextroot/images/cal.png</img>
+			<!-- Added 7/8/2010 -->
+			<img_reset>/_contextroot/images/cal_reset.png</img_reset>
+		</calendar>
+		<!-- Added 7/8/2010 -->
+		<validation>
+			<js>/_contextroot/tools/validator/gen_validatorv4.js</js>
+		</validation>
+		<form>
+			<url>/_contextroot/form</url>
+			<admin>/_contextroot/formAdmin</admin>
+		</form>
+		<rss>
+			<cache>15</cache>
+		</rss>
+		<mathprocessor>
+			<js>/_contextroot/tools/math/MathProcessor.js</js>
+		</mathprocessor>
+	</tools>
+
+
+</config>
+
+
+
+
+
+
+

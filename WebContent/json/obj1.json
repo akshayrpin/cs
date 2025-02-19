@@ -1,0 +1,144 @@
+{
+  "title": "801 N Rodeo Dr.",
+  "subtitle": "BS1509234",
+  "alert": "alert",
+  "groups": [
+    {
+      "id": 1,
+      "group": "Test Group",
+      "pub": "Y",
+      "obj": [
+        {
+          "id": 1,
+          "group": "Test Group",
+          "field": "Test Field",
+          "type": "String",
+          "order": 1,
+          "required": "N",
+          "maxchar": 10000,
+          "value": "Test Value",
+          "value_int": -1,
+          "value_date": ""
+        },
+        {
+          "id": 2,
+          "group": "Test Group",
+          "field": "Test Field 2",
+          "type": "String",
+          "order": 2,
+          "required": "N",
+          "maxchar": 10000,
+          "value": "Test Value 2",
+          "value_int": -1,
+          "value_date": ""
+        }
+      ]
+    },
+    {
+      "id": "1",
+      "group": "Conditions",
+      "pub": "Y",
+      "cols": 1,
+      "obj": [
+        {
+          "id": 1,
+          "group": "Conditions",
+          "field": "Condition 1",
+          "type": "String",
+          "order": 1,
+          "required": "N",
+          "alert": "alert",
+          "maxchar": 10000,
+          "value": "Condition Value 1",
+          "value_int": -1,
+          "value_date": ""
+        },
+        {
+          "id": 2,
+          "group": "Conditions",
+          "field": "Conditions 2",
+          "type": "String",
+          "order": 2,
+          "required": "N",
+          "alert": "alert",
+          "maxchar": 10000,
+          "value": "Condition Value 2",
+          "value_int": -1,
+          "value_date": ""
+        }
+      ]
+    },
+    {
+      "id": "1",
+      "group": "Fees",
+      "pub": "Y",
+      "fields": ["Fee","Payment","Credit","Bounced","Balance"],
+      "index": ["Fee","Payment"],
+      "obj": [
+        {
+          "id": 1,
+          "group": "Fees",
+          "field": "Activity",
+          "type": "Map",
+          "order": 1,
+          "required": "N",
+          "maxchar": 10000,
+          "values": {
+          	"Fee": {
+          	  "type": "currency",
+          	  "value": "325.00"
+          	},
+          	"Payment": {
+          	  "type": "currency",
+          	  "value": "0"
+          	},
+          	"Credit": {
+          	  "type": "currency",
+          	  "value": "0"
+          	},
+          	"Bounced": {
+          	  "type": "currency",
+          	  "value": "0"
+          	},
+          	"Balance": {
+          	  "type": "currency",
+          	  "value": "325.00"
+          	}
+          }
+        },
+        {
+          "id": 2,
+          "id": 1,
+          "group": "Fees",
+          "field": "Plan Check",
+          "type": "Map",
+          "order": 1,
+          "required": "N",
+          "maxchar": 10000,
+          "values": {
+          	"Fee": {
+          	  "type": "currency",
+          	  "value": "325.00"
+          	},
+          	"Payment": {
+          	  "type": "currency",
+          	  "value": "0"
+          	},
+          	"Credit": {
+          	  "type": "currency",
+          	  "value": "0"
+          	},
+          	"Bounced": {
+          	  "type": "currency",
+          	  "value": "0"
+          	},
+          	"Balance": {
+          	  "type": "currency",
+          	  "value": "325.00"
+          	}
+          }
+        }
+      ]
+    }
+  ]
+}

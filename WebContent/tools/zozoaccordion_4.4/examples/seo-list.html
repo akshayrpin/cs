@@ -1,0 +1,98 @@
+﻿<!doctype html>
+<html class="z-width600">
+<head>
+    <title>SEO</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0" />
+
+    <!-- Examples CSS (Not needed) -->
+    <link href="../css/zozo.examples.min.css" rel="stylesheet" />
+
+    <!-- Zozo Accordion css -->
+    <link href="../css/zozo.accordion.min.css" rel="stylesheet">
+
+    <!-- Zozo Accordion js -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/zozo.accordion.min.js"></script>
+</head>
+<body>
+    <div id="ribbon"></div>
+    <div id="page">
+        <a class="z-btn z-back" href="index.html">Back</a>
+
+        <!-- Zozo Accordion Start-->
+        <ul id="demo-accordion">
+            <li>
+                <h3>Overview</h3>
+                <div>
+                    <p><strong>Slick Design</strong> and Limitless Customization</p>
+                </div>
+            </li>
+            <li>
+                <h3>Some of it's key features </h3>
+                <div>
+                    <ul>
+                        <li>Responsive &amp; touch-friendly </li>
+                        <li>Horizontal &amp; vertical accordion </li>
+                        <li>Load content with AJAX</li>
+                        <li>Slider accordion with images</li>
+                        <li>CSS3 transitions with fallback (superfast on mobile & tablet)</li>
+                        <li>Semantic HTML5 &amp; SEO friendly </li>
+                        <li>Keyboard navigation &amp; WAI-ARIA support </li>
+                        <li>10 unique skins, nested &amp; multiple instances </li>
+                        <li>Free updates &amp; support </li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <h3>Documentation</h3>
+                <div>
+                    <p>Fully documented and step-by-step guide provided to help you get up and running with Zozo Accordion.</p>
+                    <p>Documentation can be found on<a href="http://docs.zozoui.com/accordion">docs.zozoui.com/accordion</a>.</p>
+                </div>
+            </li>
+            <li>
+                <h3>10+ Preset themes </h3>
+                <div>
+                    <ul>
+                        <li>white</li>
+                        <li>crystal</li>
+                        <li>silver</li>
+                        <li>gray</li>
+                        <li>black</li>
+                        <li>orange</li>
+                        <li>red</li>
+                        <li>green</li>
+                        <li>yellow</li>
+                        <li>purple</li>
+                        <li>blue</li>
+                        <li>lightblue</li>
+                        <li>deepblue</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <h3><a href="http://codecanyon.net/item/zozo-tabs/3327836?ref=ZozoUI" target="_blank">Purchase</a></h3>
+                <div>
+                    <p><a href="http://codecanyon.net/item/zozo-tabs/3327836?ref=ZozoUI">Get Zozo Accordion from CodeCanyon.net</a></p>
+                </div>
+            </li>
+        </ul>
+        <!-- Zozo Accordion End-->
+
+    </div>
+
+
+    <script>
+        jQuery(document).ready(function ($) {
+            /*  jQuery activation and setting options. Visit docs.zozoui.com/accordion for 
+                complete documentation, option list, public methods, callback events.*/
+            $("#demo-accordion").zozoAccordion({
+                theme: "silver",
+                active: 0,
+                sectionSpacing: 4
+            });
+        });
+    </script>
+</body>
+</html>

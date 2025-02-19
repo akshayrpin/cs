@@ -1,0 +1,76 @@
+﻿<!doctype html>
+<html class="z-width600">
+<head>
+    <title>Basic usage</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0" />
+
+    <!-- Examples CSS (Not needed) -->
+    <link href="../css/zozo.examples.min.css" rel="stylesheet" />
+
+    <!-- Zozo Accordion css -->
+    <link href="../css/zozo.accordion.min.css" rel="stylesheet">
+
+    <!-- Zozo Accordion js -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/zozo.accordion.min.js"></script>
+</head>
+<body>
+    <div id="ribbon"></div>
+    <div id="page">
+        <a class="z-btn z-back" href="index.html">Back</a>
+
+        <!-- Zozo Accordion Start-->
+        <ul id="demo-accordion">
+            <li>
+                <h3>Overview </h3>
+                <div>
+                    <p><strong>Slick Design</strong> and Limitless Customization</p>
+                </div>
+            </li>
+            <li>
+                <h3>Some of it's key features </h3>
+                <div>
+                </div>
+            </li>
+            <li>
+                <h3>Documentation</h3>
+                <div>
+                </div>
+            </li>
+            <li>
+                <h3>10+ Preset themes </h3>
+                <div>
+                </div>
+            </li>
+            <li>
+                <h3>Error Example</h3>
+                <div>
+                </div>
+            </li>
+        </ul>
+        <!-- Zozo Accordion End-->
+
+        <h4 class="z-note">NOTE: Some browsers like Chrome and Safari has a restriction on using ajax with local resources. It will throw an error. To solve this, try Use firefox or upload your data to a temporary web server.</h4>
+    </div>
+
+
+    <script>
+        $(document).ready(function () {
+            $("#demo-accordion").zozoAccordion({
+                theme: "green",
+                sectionSpacing: 4,
+                headerSize: 38,
+                contentUrls: [
+                        'ajax-content/content1.html',
+                        'ajax-content/content2.html',
+                        'ajax-content/content3.html',
+                        'ajax-content/content4.html',
+                        'ajax-content/content5.test'
+                ]
+            });
+        });
+    </script>
+
+</body>
+</html>

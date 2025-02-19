@@ -1,0 +1,229 @@
+{
+    "title": "801 N Rodeo Dr.",
+    "subtitle": "BS1509234",
+    "alert": "",
+    "groups": [
+        {
+            "id": 1,
+            "group": "Test Group",
+            "addurl":"urladdress",
+            "pub": "Y",
+            "fields": ["Test Field","Test Field 2"],
+            "index": ["Test Field","Test Field 2"],
+            "values": [
+                {
+                	"field": "",
+                	"editurl": "",
+                	"alert":"",
+                	"values": {
+	                	"Test Field": {
+		                    "id": 1,
+		                    "group": "Test Group",
+		                    "field": "Test Field",
+		                    "type": "String",
+		                    "order": 1,
+		                    "required": "N",
+		                    "maxchar": 10000,
+		                    "alert": "",
+		                    "link": "",
+		                    "value": "Test Value",
+		                    "integer": -1,
+		                    "date": ""
+		                },
+		                "Test Field 2": {
+		                    "id": 2,
+		                    "group": "Test Group",
+		                    "field": "Test Field 2",
+		                    "type": "String",
+		                    "order": 2,
+		                    "required": "N",
+		                    "alert": "",
+		                    "link": "",
+		                    "maxchar": 10000,
+		                    "value": "Test Value 2",
+		                    "integer": -1,
+		                    "date": ""
+		                }
+                	}
+	            },
+                {
+                	"field": "",
+                	"editurl": "",
+                	"values": {
+	                	"Test Field": {
+		                    "id": 1,
+		                    "group": "Test Group",
+		                    "field": "Test Field",
+		                    "type": "String",
+		                    "order": 1,
+		                    "required": "N",
+		                    "maxchar": 10000,
+		                    "alert": "",
+		                    "link": "",
+		                    "value": "Test Value",
+		                    "integer": -1,
+		                    "date": ""
+		                },
+		                "Test Field 2": {
+		                    "id": 2,
+		                    "group": "Test Group",
+		                    "field": "Test Field 2",
+		                    "type": "String",
+		                    "order": 2,
+		                    "required": "N",
+		                    "alert": "",
+		                    "link": "",
+		                    "maxchar": 10000,
+		                    "value": "Test Value 2",
+		                    "integer": -1,
+		                    "date": ""
+		                }
+                	}
+	            }
+            ]
+        },
+        {
+            "id": "1",
+            "group": "Conditions",
+            "pub": "Y",
+            "cols": 2,
+            "obj": [
+                {
+                    "id": 1,
+                    "group": "Conditions",
+                    "field": "Condition 1",
+                    "type": "String",
+                    "order": 1,
+                    "required": "N",
+                    "alert": "issued",
+                    "link": "",
+                    "maxchar": 10000,
+                    "value": "Condition Value 1",
+                    "integer": -1,
+                    "date": ""
+                },
+                {
+                    "id": 2,
+                    "group": "Conditions",
+                    "field": "Conditions 2",
+                    "type": "String",
+                    "order": 2,
+                    "required": "N",
+                    "alert": "",
+                    "link": "",
+                    "maxchar": 10000,
+                    "value": "Condition Value 2",
+                    "integer": -1,
+                    "date": ""
+                },
+                {
+                    "id": 3,
+                    "group": "Conditions",
+                    "field": "Conditions 3",
+                    "type": "String",
+                    "order": 2,
+                    "required": "N",
+                    "alert": "",
+                    "link": "",
+                    "maxchar": 10000,
+                    "value": "Condition Value 3",
+                    "integer": -1,
+                    "date": ""
+                }
+            ]
+        },
+        {
+            "id": "1",
+            "group": "Fees",
+            "pub": "Y",
+            "fields": [
+                "Fee",
+                "Payment",
+                "Credit",
+                "Bounced",
+                "Balance"
+            ],
+            "index": [
+                "Payment"
+            ],
+            "obj": [
+                {
+                    "id": 1,
+                    "group": "Fees",
+                    "field": "Activity",
+                    "editurl": "",
+                    "type": "Map",
+                    "order": 1,
+                    "alert":"issued",
+                    "required": "N",
+                    "maxchar": 10000,
+                    "values": {
+                        "Fee": {
+                            "type": "currency",
+                            "link": "",
+                            "value": "325.00"
+                        },
+                        "Payment": {
+                            "type": "currency",
+                            "link": "",
+                            "value": "325.00"
+                        },
+                        "Credit": {
+                            "type": "currency",
+                            "link": "",
+                            "value": "0"
+                        },
+                        "Bounced": {
+                            "type": "currency",
+                            "link": "",
+                            "value": "0"
+                        },
+                        "Balance": {
+                            "type": "currency",
+                            "link": "",
+                            "value": "0.00"
+                        }
+                    }
+                },
+                {
+                    "id": 1,
+                    "group": "Fees",
+                    "field": "Plan Check",
+                    "editurl": "",
+                    "type": "Map",
+                    "order": 1,
+                    "alert":"alert",
+                    "required": "N",
+                    "maxchar": 10000,
+                    "values": {
+                        "Fee": {
+                            "type": "currency",
+                            "link": "",
+                            "value": "325.00"
+                        },
+                        "Payment": {
+                            "type": "currency",
+                            "link": "",
+                            "value": "0"
+                        },
+                        "Credit": {
+                            "type": "currency",
+                            "link": "",
+                            "value": "0"
+                        },
+                        "Bounced": {
+                            "type": "currency",
+                            "link": "",
+                            "value": "0"
+                        },
+                        "Balance": {
+                            "type": "currency",
+                            "link": "",
+                            "value": "325.00"
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}

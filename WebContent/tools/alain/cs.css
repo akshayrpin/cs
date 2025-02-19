@@ -1,0 +1,204 @@
+html, body { height: 100%; padding: 0px; margin: 0px; overflow: hidden }
+#csheader { display: table; width: 100%; height: 60px; background-color: #555555; list-style-type: none; padding: 0px; margin: 0px }
+#csheader li { display: table-cell; vertical-align: middle; }
+#shield { width: 60px; background-color: #111111; text-align: center }
+#cslogo { width: 200px; text-align: center }
+
+#userinitial {
+	font-family: Roboto Condensed, Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	color: #555;
+	text-transform: uppercase;
+	line-height: 28px;
+	width: 28px;
+	height: 28px;
+	text-align: center;
+	border-radius: 50%;
+	background-color: #fff;
+	cursor: pointer;
+	margin-left: 5px;
+	margin-right: 20px;
+}
+#userinitial:hover {
+	box-shadow: 0px 0px #000;
+}
+
+.plogin { width: 300px; }
+.ploginusername { font-family: Roboto Condensed, Arial, Helvetica, sans-serif; font-size: 15px; text-align: center; background-color: #fff; color: #555; margin-bottom: 20px }
+
+.ploginlink { font-family: Roboto Condensed, Arial, Helvetica, sans-serif; background-color: #eee; font-size: 15px; color: #000; border: 1px solid #ccc; text-decoration: none; padding: 10px; cursor: pointer; text-align: center; }
+.ploginlink:hover { color: #fff; border: 1px solid #fff; background-color: #ccc; }
+.plogintable {
+	width: 90%;
+	background-color: #fff;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 25px;
+}
+.plogintable tr td {
+	padding: 2px;
+	vertical-align: top;
+	font-family: Roboto Condensed, Arial, Helvetica, sans-serif;
+	font-size: 11px; 
+}
+.ploginlabeltd {
+}
+.plogincontenttd {
+	text-align: right;
+}
+
+div.ploginlinkbox { border-top: 1px solid #ccc; background-color: #eee; width: 100%; padding: 6px; }
+
+.plogininitial {
+	font-family: Roboto Condensed, Arial, Helvetica, sans-serif;
+	font-size: 35px;
+	font-weight: bold;
+	color: #fff;
+	text-transform: uppercase;
+	line-height: 60px;
+	width: 60px;
+	height: 60px;
+	background-color: #cccccc;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+	border-radius: 50%;
+}
+
+a.signin, a.resignin {
+	font-family: Roboto Condensed, Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	padding: 8px;
+	padding-left: 40px;
+	padding-right: 15px;
+	border: 1px solid transparent;
+	color: #fff;
+	border-radius: 8px;
+	margin-right: 15px;
+	white-space: nowrap;
+	text-decoration: none !important;
+	background-image: url(/cs/images/icons/controls/white/login.png);
+	background-size: 25px 25px;
+	background-repeat: no-repeat;
+	background-position: 10px center;
+}
+a.signin {
+	background-color: transparent;
+}
+a.resignin {
+	background-color: #ff0000;
+}
+a.signin:hover, a.resignin:hover {
+	text-decoration: none;
+	border: 1px solid #aaa;
+	background-image: url(/cs/images/icons/controls/gray/login.png);
+	background-color: #fff;
+	background-size: 30px 30px;
+	background-position: 8px center;
+	color: #000;
+}
+
+#glsearch { }
+input.glsearch { border: 0px; color: #ffffff; font-family: Arial, Helvetica, sans-serif; font-size: 18px; outline: none; background-color: #777777; border-radius: 20px; box-shadow: inset 0px 0px 5px 0px #000000; padding: 10px; background-image: url(/cs/images/icons/dark/search.png); background-repeat: no-repeat; background-position: right 10px center }
+input.glsearch_on { color: #000000 !important; background-color: #ffffff !important }
+#csadmin { width: 40px; text-align: center; }
+#cslogin { width: 40px; text-align: center; }
+#csbkmark { width: 40px; text-align: center; }
+#csreport { width: 40px; text-align: center; }
+.cs_label     { background-color: #aaaaaa; font-family: Roboto Condensed, Arial; font-size: 12px; padding-left: 10px; height: 35px; font-weight: 700; text-transform: uppercase; color: #ffffff; line-height: 35px; vertical-align: middle }
+.cs_message   { font-family: Roboto Condensed, Arial; font-size: 12px; padding-left: 10px; font-weight: 700; text-transform: uppercase; color: #000;  }
+.cs_tree   { font-family: Roboto Condensed, Arial, Helvetica, sans-serif; text-transform: uppercase; font-size: 11px; white-space: nowrap; color: #000000; overflow-x: hidden; padding-top: 3px; padding-bottom: 3px }
+
+.cs_highlight { background-color: #336699; color: #ffffff; }
+
+.cs_tree[treeid=main]   { border-top: 1px solid #cccccc; }
+.cs_tree[treeid=sub]   { border-top: 1px solid #dddddd; }
+div.cs_search { text-align: center; padding: 10px; z-index: 100; width: 100% }
+.cs_search_container { border: 0px; border-radius: 10px; box-shadow: inset 0px 0px 3px 0px #444444; font-family: Arial, Helvetica, sans-serif; font-size: 12px; outline: none; padding: 5px; background-color: #ffffff }
+input.cs_search { color: #aaaaaa; width: 100%; border: 0px; font-family: Arial, Helvetica, sans-serif; font-size: 12px; padding: 5px; }
+.cs_search_table { background-color: #ffffff; width: 100%; border: 0px; }
+.cs_search_button { width: 1px; white-space: nowrap }
+#csuiaddl { display: table; width: 100%; height: 100%; background-color: #cccccc; list-style-type: none; padding: 0px; margin: 0px }
+
+#csui { display: table; width: 100%; height: calc(100% - 60px); list-style-type: none; padding: 0px; margin: 0px; table-layout:fixed }
+#menu, #main, #sub, #linkcontainer { display: table-cell; vertical-align: top; }
+
+#menu { width: 60px; background-color: #555555; height: 100%; z-index: 4; }
+#main { width: 225px; background-color: #dddddd; height: 100%; border-right: 1px solid #cccccc; z-index: 3 }
+#sub { width: 225px; background-color: #eeeeee; height: 100%; border-right: 1px solid #cccccc; z-index: 2 }
+#linkcontainer { background-color: #ffffff; height: 100%; z-index: 1; }
+#link { width: 100%; height: 100%; background-color: #ffffff; vertical-align: top; overflow; scroll }
+
+.cs_tree img { width: 40px; padding: 5px }
+
+.cs_tree[treeid=menu]   { text-align: center; padding: 10px; border-bottom: 1px solid #777777; }
+.cs_tree[treeid=menu]:hover   { background-color: #336699; }
+.cs_tree[treeid=menu] font, .cs_tree[treeid=menu] span { color: #ffffff; font-size: 8px; display: block; }
+.cs_tree_loading {
+	background-image: url(/cs/images/loaders/loading.gif); background-repeat: no-repeat; background-position: center top 125px;
+}
+
+::-webkit-input-placeholder { color: #ccc; }
+:-moz-placeholder { color: #ccc; }
+::-moz-placeholder { color: #ccc; }
+:-ms-input-placeholder { color: #ccc; }
+
+.minTree { width: 25px !important; }
+.maximizeButton:hover { background-image: url(/cs/images/right-white.png) !important; background-color: #336699 !important;  color: #FFFFFF; }
+.maximizeButtonText { white-space: nowrap; font-family: Roboto Condensed, Arial; font-size: 12px; font-weight: bold; -webkit-transform: rotate(90deg); -moz-transform: rotate(90deg); -ms-transform: rotate(90deg); -o-transform: rotate(90deg); filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1); }
+.maximizeButton { width: 100%; height: 100%; background-repeat: no-repeat; background-position: center center; cursor: pointer; color: #555555; }
+
+.cs_label_tools { height: 35px; float: right; }
+.cs_label_tools_min { display: inline-block; width: 30px; height: 35px; background-image: url(/cs/images/left-arrow-white.png) !important; background-repeat: no-repeat; background-position: center center; }
+.cs_label_tools_pin { display: inline-block; width: 30px; height: 35px; background-image: url(/cs/images/pin-inactive.png); background-repeat: no-repeat; background-position: center center; }
+.cs_pinned { background-image: url(/cs/images/pin-white.png) !important; }
+.cs_option_container { background-color: #CCCCCC !important; }
+.cs_option { text-transform: uppercase; font-family: Roboto Condensed, Arial; font-size: 10px; color: #888888; display: inline-block; padding-left: 5px; padding-right: 5px; margin: 0px; padding-top: 0px; zoom: 1; height: 25px; line-height: 25px; }
+.cs_option_selected { color: #FFFFFF !important; font-size: 11px !important; font-weight: bold !important; background-color: #AAAAAA !important; }
+.cs_option:hover { color: #555555 !important; }
+
+	.brloader {
+		position: relative;
+		left: 0px;
+		top: 0px;
+		width: 100%;
+		height: 100%;
+		z-index: 9999;
+		background: url(/cs/images/loaders/gears.gif) center no-repeat #fff;
+	}
+
+.br_hardhold span {
+	padding-left: 15px;
+	color: #e2574c;
+	background-image: url(/cs/images/flags/hardhold.png) !important; background-repeat: no-repeat; background-position: left center; 
+}
+.br_hardhold.cs_highlight span {
+	color: #ffffff;
+}
+
+.br_hardhold.cs_highlight {
+	background-color: #8f6662 !important;
+}
+
+.br_softhold:not(.br_hardhold) span {
+	padding-left: 15px;
+	background-image: url(/cs/images/flags/softhold.png) !important; background-repeat: no-repeat; background-position: left center; 
+}
+
+.br_expired {
+	color: #ff3333;
+}
+
+@media screen and (max-width: 1000px) {
+
+
+}
+@media screen and (min-width: 1000px) {
+
+
+
+}
+	 

@@ -1,0 +1,245 @@
+{
+    "root": [
+        {
+            "dataid": "67847",
+            "children": "http://localhost:8080/cs/lso/projects.jsp?id=67847",
+            "link": "http://localhost:8080/cs/summary.jsp?_ent=lso&_typeid=67847&_type=project&_id=67847",
+            "description": "CODE ENFORCEMENT",
+            "id": "67847",
+            "title": "CODE ENFORCEMENT"
+        },
+        {
+            "dataid": "49195",
+            "children": "http://localhost:8080/cs/lso/projects.jsp?id=49195",
+            "link": "http://localhost:8080/cs/summary.jsp?_ent=lso&_typeid=49195&_type=project&_id=49195",
+            "description": "DISHWASHER INSTALLATION ",
+            "id": "49195",
+            "title": "DISHWASHER INSTALLATION "
+        },
+        {
+            "dataid": "60264",
+            "children": "http://localhost:8080/cs/lso/projects.jsp?id=60264",
+            "link": "http://localhost:8080/cs/summary.jsp?_ent=lso&_typeid=60264&_type=project&_id=60264",
+            "description": "MOVING VAN",
+            "id": "60264",
+            "title": "MOVING VAN"
+        },
+        {
+            "dataid": "60357",
+            "children": "http://localhost:8080/cs/lso/projects.jsp?id=60357",
+            "link": "http://localhost:8080/cs/summary.jsp?_ent=lso&_typeid=60357&_type=project&_id=60357",
+            "description": "ROOFING",
+            "id": "60357",
+            "title": "ROOFING"
+        },
+        {
+            "dataid": "202008",
+            "children": "http://localhost:8080/cs/lso/projects.jsp?id=202008",
+            "link": "http://localhost:8080/cs/summary.jsp?_ent=lso&_typeid=202008&_type=project&_id=202008",
+            "description": "Clorox commercial",
+            "id": "202008",
+            "title": "Clorox commercial"
+        },
+        {
+            "dataid": "201489",
+            "children": "http://localhost:8080/cs/lso/projects.jsp?id=201489",
+            "link": "http://localhost:8080/cs/summary.jsp?_ent=lso&_typeid=201489&_type=project&_id=201489",
+            "description": "Wayfair",
+            "id": "201489",
+            "title": "Wayfair"
+        },
+        {
+            "dataid": "199894",
+            "children": "http://localhost:8080/cs/lso/projects.jsp?id=199894",
+            "link": "http://localhost:8080/cs/summary.jsp?_ent=lso&_typeid=199894&_type=project&_id=199894",
+            "description": "Oscar Mayer commercial",
+            "id": "199894",
+            "title": "Oscar Mayer commercial"
+        },
+        {
+            "dataid": "199357",
+            "children": "http://localhost:8080/cs/lso/projects.jsp?id=199357",
+            "link": "http://localhost:8080/cs/summary.jsp?_ent=lso&_typeid=199357&_type=project&_id=199357",
+            "description": "Test",
+            "id": "199357",
+            "title": "Test"
+        },
+        {
+            "dataid": "198111",
+            "children": "http://localhost:8080/cs/lso/projects.jsp?id=198111",
+            "link": "http://localhost:8080/cs/summary.jsp?_ent=lso&_typeid=198111&_type=project&_id=198111",
+            "description": "SOLAR PV FOR SFR",
+            "id": "198111",
+            "title": "SOLAR PV FOR SFR"
+        },
+        {
+            "dataid": "196818",
+            "children": "http://localhost:8080/cs/lso/projects.jsp?id=196818",
+            "link": "http://localhost:8080/cs/summary.jsp?_ent=lso&_typeid=196818&_type=project&_id=196818",
+            "description": "Oscar Mayer commercial",
+            "id": "196818",
+            "title": "Oscar Mayer commercial"
+        },
+        {
+            "dataid": "196301",
+            "children": "http://localhost:8080/cs/lso/projects.jsp?id=196301",
+            "link": "http://localhost:8080/cs/summary.jsp?_ent=lso&_typeid=196301&_type=project&_id=196301",
+            "description": "Smith & Jones",
+            "id": "196301",
+            "title": "Smith & Jones"
+        },
+        {
+            "dataid": "195598",
+            "children": "http://localhost:8080/cs/lso/projects.jsp?id=195598",
+            "link": "http://localhost:8080/cs/summary.jsp?_ent=lso&_typeid=195598&_type=project&_id=195598",
+            "description": "Oscar Mayer commercial",
+            "id": "195598",
+            "title": "Oscar Mayer commercial"
+        },
+        {
+            "dataid": "194928",
+            "children": "http://localhost:8080/cs/lso/projects.jsp?id=194928",
+            "link": "http://localhost:8080/cs/summary.jsp?_ent=lso&_typeid=194928&_type=project&_id=194928",
+            "description": "Arts & Sciences",
+            "id": "194928",
+            "title": "Arts & Sciences"
+        },
+        {
+            "dataid": "194515",
+            "children": "http://localhost:8080/cs/lso/projects.jsp?id=194515",
+            "link": "http://localhost:8080/cs/summary.jsp?_ent=lso&_typeid=194515&_type=project&_id=194515",
+            "description": "RB Factory",
+            "id": "194515",
+            "title": "RB Factory"
+        },
+        {
+            "dataid": "194516",
+            "children": "http://localhost:8080/cs/lso/projects.jsp?id=194516",
+            "link": "http://localhost:8080/cs/summary.jsp?_ent=lso&_typeid=194516&_type=project&_id=194516",
+            "description": "RB Factory",
+            "id": "194516",
+            "title": "RB Factory"
+        },
+        {
+            "dataid": "192775",
+            "children": "http://localhost:8080/cs/lso/projects.jsp?id=192775",
+            "link": "http://localhost:8080/cs/summary.jsp?_ent=lso&_typeid=192775&_type=project&_id=192775",
+            "description": "ZONING LETTER REQUEST",
+            "id": "192775",
+            "title": "ZONING LETTER REQUEST"
+        },
+        {
+            "dataid": "190785",
+            "children": "http://localhost:8080/cs/lso/projects.jsp?id=190785",
+            "link": "http://localhost:8080/cs/summary.jsp?_ent=lso&_typeid=190785&_type=project&_id=190785",
+            "description": "Commercial for Oscar Mayer",
+            "id": "190785",
+            "title": "Commercial for Oscar Mayer"
+        },
+        {
+            "dataid": "187507",
+            "children": "http://localhost:8080/cs/lso/projects.jsp?id=187507",
+            "link": "http://localhost:8080/cs/summary.jsp?_ent=lso&_typeid=187507&_type=project&_id=187507",
+            "description": "Commercial for Oscar Mayer",
+            "id": "187507",
+            "title": "Commercial for Oscar Mayer"
+        },
+        {
+            "dataid": "186664",
+            "children": "http://localhost:8080/cs/lso/projects.jsp?id=186664",
+            "link": "http://localhost:8080/cs/summary.jsp?_ent=lso&_typeid=186664&_type=project&_id=186664",
+            "description": "Mesh Media Productions dba Panlicker Productions",
+            "id": "186664",
+            "title": "Mesh Media Productions dba Panlicker Productions"
+        },
+        {
+            "dataid": "184578",
+            "children": "http://localhost:8080/cs/lso/projects.jsp?id=184578",
+            "link": "http://localhost:8080/cs/summary.jsp?_ent=lso&_typeid=184578&_type=project&_id=184578",
+            "description": "REMODEL (SINGLE, MULTI-FAMILY) - 07/01/2011",
+            "id": "184578",
+            "title": "REMODEL (SINGLE, MULTI-FAMILY) - 07/01/2011"
+        },
+        {
+            "dataid": "181950",
+            "children": "http://localhost:8080/cs/lso/projects.jsp?id=181950",
+            "link": "http://localhost:8080/cs/summary.jsp?_ent=lso&_typeid=181950&_type=project&_id=181950",
+            "description": "Photo shoot for financial institution",
+            "id": "181950",
+            "title": "Photo shoot for financial institution"
+        },
+        {
+            "dataid": "177577",
+            "children": "http://localhost:8080/cs/lso/projects.jsp?id=177577",
+            "link": "http://localhost:8080/cs/summary.jsp?_ent=lso&_typeid=177577&_type=project&_id=177577",
+            "description": "Photo shoot for Target",
+            "id": "177577",
+            "title": "Photo shoot for Target"
+        },
+        {
+            "dataid": "172596",
+            "children": "http://localhost:8080/cs/lso/projects.jsp?id=172596",
+            "link": "http://localhost:8080/cs/summary.jsp?_ent=lso&_typeid=172596&_type=project&_id=172596",
+            "description": "PUBLIC WORKS",
+            "id": "172596",
+            "title": "PUBLIC WORKS"
+        },
+        {
+            "dataid": "172365",
+            "children": "http://localhost:8080/cs/lso/projects.jsp?id=172365",
+            "link": "http://localhost:8080/cs/summary.jsp?_ent=lso&_typeid=172365&_type=project&_id=172365",
+            "description": "Melanie Acevedo",
+            "id": "172365",
+            "title": "Melanie Acevedo"
+        },
+        {
+            "dataid": "143262",
+            "children": "http://localhost:8080/cs/lso/projects.jsp?id=143262",
+            "link": "http://localhost:8080/cs/summary.jsp?_ent=lso&_typeid=143262&_type=project&_id=143262",
+            "description": "Photo shoot for Kelloggs",
+            "id": "143262",
+            "title": "Photo shoot for Kelloggs"
+        },
+        {
+            "dataid": "143038",
+            "children": "http://localhost:8080/cs/lso/projects.jsp?id=143038",
+            "link": "http://localhost:8080/cs/summary.jsp?_ent=lso&_typeid=143038&_type=project&_id=143038",
+            "description": "Hanover Direct",
+            "id": "143038",
+            "title": "Hanover Direct"
+        },
+        {
+            "dataid": "89746",
+            "children": "http://localhost:8080/cs/lso/projects.jsp?id=89746",
+            "link": "http://localhost:8080/cs/summary.jsp?_ent=lso&_typeid=89746&_type=project&_id=89746",
+            "description": "Public Works",
+            "id": "89746",
+            "title": "Public Works"
+        },
+        {
+            "dataid": "89738",
+            "children": "http://localhost:8080/cs/lso/projects.jsp?id=89738",
+            "link": "http://localhost:8080/cs/summary.jsp?_ent=lso&_typeid=89738&_type=project&_id=89738",
+            "description": "Public Works",
+            "id": "89738",
+            "title": "Public Works"
+        }
+    ],
+    "header": {
+        "parents": ["184578","1361589"],
+        "search": "http://localhost:8080/cs/lso/search.jsp",
+        "dataid": "1361589",
+        "options": [],
+        "label": "LSO BROWSER",
+        "menu": 184578
+    },
+    "items": [
+        {
+            "dataid": "1361589",
+            "link": "http://localhost:8080/cs/summary.jsp?_ent=lso&_typeid=1361589&_type=activity&_id=1361589",
+            "description": "test",
+            "id": "1361589",
+            "title": "Building - BS1205552"
+        }
+    ]
+}

@@ -1,0 +1,102 @@
+﻿<!doctype html>
+<html class="z-width1400">
+<head>
+    <title>Slider 2</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0" />
+
+    <!-- Examples CSS (Not needed) -->
+    <link href="../css/zozo.examples.min.css" rel="stylesheet" />
+
+    <!-- Zozo Accordion css -->
+    <link href="../css/zozo.accordion.min.css" rel="stylesheet">
+
+    <!-- Zozo Accordion js -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/zozo.accordion.min.js"></script>
+</head>
+<body>
+    <div id="ribbon"></div>
+    <div id="page">
+        <a class="z-btn z-back" href="index.html">Back</a>
+
+        <!-- Zozo Accordion Start-->
+        <ul id="demo-accordion">
+            <li>
+                <h3>Photography </h3>
+                <div>
+                    <img src="http://farm9.staticflickr.com/8144/7184416672_12cb812fa0_z.jpg" />
+                </div>
+            </li>
+            <li>
+                <h3>Web Design </h3>
+                <div>
+                    <img src="http://farm9.staticflickr.com/8022/7526217400_55362fa879_b.jpg" />
+                </div>
+            </li>
+            <li>
+                <h3>Illustrations </h3>
+                <div>
+                    <img src="http://farm8.staticflickr.com/7006/6410081515_058465be99_z.jpg" />
+                </div>
+            </li>
+            <li>
+                <h3>Miscancellous </h3>
+                <div>
+                    <img src="http://farm4.staticflickr.com/3181/2333116714_9ecfa7c4e6_z.jpg?zz=1" />
+                </div>
+            </li>
+            <li>
+                <h3>References </h3>
+                <div>
+                    <img src="http://farm8.staticflickr.com/7098/7040580719_546bc4f161_z.jpg" />
+                </div>
+            </li>
+        </ul>
+        <!-- Zozo Accordion End-->
+
+    </div>
+
+    <style>
+        .z-accordion > section > h3 {
+            text-transform: uppercase;
+        }
+    </style>
+
+    <script>
+        jQuery(document).ready(function ($) {
+            /*  jQuery activation and setting options. Visit docs.zozoui.com/accordion for 
+                complete documentation, option list, public methods, callback events.*/
+            $("#demo-accordion").zozoAccordion({
+                theme: "green",
+                orientation: "horizontal",
+                active: 2,
+                width: 1600,
+                height: 440,
+                sectionSpacing: 0,
+                headerSize: 70,
+                headerFontSize: 2.2,
+                sectionSpacing:8,
+                slider: true,
+                showIcons: false,
+                responsive: true,
+                shadows: true,
+                dotNav: true,
+                bordered: false,
+                responsiveDelay: 0,
+                animation: {
+                    easing: "easeOutQuart",
+                    duration: 400
+                },
+                autoplay: {
+                    interval: 5000,
+                    smart: false
+                },
+                vertical: {
+                    sectionSpacing: 4
+                }
+            });
+        });
+    </script>
+</body>
+</html>

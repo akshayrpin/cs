@@ -1,0 +1,20 @@
+{
+	"choices": [
+		{ 
+			"id": "1",
+			"value": "1",
+			"text": "one",
+			"selected": "Y"
+		},
+		{ 
+			"id": "2",
+			"value": "2",
+			"text": "two"
+		},
+		{ 
+			"id": "3",
+			"value": "3",
+			"text": "three"
+		}
+	]
+}

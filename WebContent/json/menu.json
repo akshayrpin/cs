@@ -1,0 +1,48 @@
+{
+
+	"panels": {
+		"menu": {
+			"url": "json/menu.json"
+		},
+		"main": {
+		},
+		"sub": {
+		},
+		"link": {
+		}
+	},
+	"root": [
+		{
+			"dataid": "menu1",
+			"image": "images/lso.png",
+			"title": "LSO",
+			"main": "json/lso.json"
+		},
+		{
+			"json-id": "menu2",
+			"image": "images/gis.png",
+			"title": "GIS",
+			"link": "lso1"
+		},
+		{
+			"json-id": "menu3",
+			"image": "images/inspection.png",
+			"title": "INSPECTION",
+			"link": "lso1"
+		},
+		{
+			"json-id": "menu4",
+			"image": "images/finance.png",
+			"title": "FINANCE",
+			"link": "lso1"
+		},
+		{
+			"json-id": "menu5",
+			"image": "images/finance.png",
+			"title": "SEARCH",
+			"link": "lso2"
+		}
+	]
+
+
+}

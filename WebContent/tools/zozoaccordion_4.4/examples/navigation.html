@@ -1,0 +1,106 @@
+﻿<!doctype html>
+<html class="z-width400">
+<head>
+    <title>Vertical Navigation</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0" />
+
+    <!-- Examples CSS (Not needed) -->
+    <link href="../css/zozo.examples.min.css" rel="stylesheet" />
+
+    <!-- Zozo Accordion css -->
+    <link href="../css/zozo.accordion.min.css" rel="stylesheet">
+
+    <!-- Zozo Accordion js -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/zozo.accordion.min.js"></script>
+</head>
+<body>
+    <div id="ribbon"></div>
+    <div id="page">
+        <a class="z-btn z-back" href="index.html">Back</a>
+
+        <!-- Zozo Accordion Start-->
+        <ul id="demo-accordion">
+            <li>
+                <h3>ZOZO UI</h3>
+                <div>
+                    <ul>
+                        <li>
+                            <a href="http://www.zozoui/accordion" target="_blank" title="Zozo Accordion - jQuery Accordion Plugin">Zozo Accordion</a>
+                        </li>
+                        <li>
+                            <a href="http://www.zozoui/tabs" target="_blank" title="Zozo Tabs - jQuery Tabs Plugin">Zozo Tabs</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <h3>SOCIAL</h3>
+                <div>
+                    <ul>
+                        <li>
+                            <a href="https://twitter.com/zozoui" target="_blank" title="Zooz UI on Twitter">Zozo UI on Twitter</a>
+                        </li>
+                        <li>
+                            <a href="http://www.facebook.com/pages/Zozo-UI/454240371295483" target="_blank" title="Zooz UI on Facebook">Zozo UI on Facebook</a>
+                        </li>
+                        <li>
+                            <a href="https://plus.google.com/101523111550453173471" target="_blank" title="Zooz UI on Google Plus">Zozo UI on Google Plus</a>
+                        </li>
+                        <li>
+                            <a href="http://pinterest.com/zozoui/" target="_blank" title="Zooz UI on Pinterest">Zozo UI on Pinterest</a>
+                        </li>
+                        <li>
+                            <a href="http://codecanyon.net/user/ZozoUI" target="_blank" title="Zooz UI on Codecanyon">Zozo UI on Codecanyon</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <h3>ZOZO UI</h3>
+                <div>
+                    <ul>
+                        <li>
+                            <a href="http://www.zozoui/accordion" target="_blank" title="Zozo Accordion - jQuery Accordion Plugin">Zozo Accordion</a>
+                        </li>
+                        <li>
+                            <a href="http://www.zozoui/tabs" target="_blank" title="Zozo Tabs - jQuery Tabs Plugin">Zozo Tabs</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <h3><a href="http://www.zozoui.com" target="_blank" title="Zozo UI">ZOZOUI WEBSITE</a></h3>
+                <div>
+                </div>
+            </li>
+        </ul>
+        <!-- Zozo Accordion End-->
+
+    </div>
+
+
+    <script>
+        jQuery(document).ready(function ($) {
+            /*  jQuery activation and setting options. Visit docs.zozoui.com/accordion for 
+                complete documentation, option list, public methods, callback events.*/
+            $("#demo-accordion").zozoAccordion({
+                theme: "red",
+                orientation2: "horizontal",
+                active: 1,
+                slider: false,
+                bordered: false,
+                shadows: true,
+                rounded: false,
+                contentNav: true,
+                sectionSpacing: 4,
+                expandMode: "multiple",
+                headerSize: 48
+            });
+        });
+    </script>
+</body>
+</html>
