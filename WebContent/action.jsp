@@ -186,6 +186,13 @@
 			String resp = CsApi.post(vo);
 			out.print(resp);
 		}
+		
+		else if (map.equalsIgnoreCase(RequestMapper.action, "getupdatedates")) {
+			RequestVO vo = RequestMapper.getRequest(map);
+			vo.setRequest("getupdatedates");
+			String resp = CsApi.post(vo);
+			out.print(resp);
+		}
 		else if (map.equalsIgnoreCase(RequestMapper.group, "attachments")) {
 			RequestVO vo = RequestMapper.getSaveRequest(map);
 			//String resp = ApiHandler.post(vo);

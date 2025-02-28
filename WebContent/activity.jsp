@@ -184,6 +184,8 @@
 										issdate.val('<%=today.getString("YYYY/MM/DD")%>');
 									}
 								});
+								
+								updateDates(typeid);
 							}
 						}
 					}
@@ -228,6 +230,15 @@
 					else {
 						div.hide();
 					}
+				});
+				
+				$('#field_PLAN_CHK_REQ').click(function(e) {
+					var tselect = $('select[name=LKUP_ACT_TYPE_ID] option:selected');
+					tselect.each(function() {
+						var vl = $(this).val();
+						$('#EXP_DATE_'+ vl).val('');
+					});
+					
 				});
 
 				<%
@@ -402,6 +413,33 @@
 				td.html(s);
 				return td;
 			}
+			
+			function updateDates(typeid){
+				var method = "getupdatedates";
+				var ty ="{}";
+				$.ajax({
+					  type: "POST",
+					  url: "action.jsp?_act="+method,
+					  dataType: 'json',		  
+					  data: { 
+						 _ent : "lso",
+						 _type : "activity",
+						 _typeid : typeid
+					    },
+					    success: function(output) {
+					    	output = JSON.stringify(output);
+					    	output = JSON.parse(output);
+					    	var addldata = output['choices'][0]['addldata'];
+					    	var adate = $('[name=APPLICATION_EXP_DATE], [itype=appexpdate]');
+					    	adate.val(addldata['APPLICATION_EXPIRE']);
+					    	var edate = $('[name=EXP_DATE], [itype=expdate]');
+					    	edate.val(addldata['PERMIT_EXPIRE']);
+					    },
+				    error: function(data) {
+				        swal('Your request was not processed. Please check your input data.');
+				    }
+				});
+			}
 
 		</script>
 	
@@ -507,8 +545,7 @@
 							%>
 								<tr>
 									<%= ObjTables.cells("SENSITIVE", "SENSITIVE", dvo.getString("SENSITIVE"), "boolean", "boolean", false, "csui", true) %>
-										<td class="csui_label">&nbsp;</td>
-										<td class="csui vertical csui_field">&nbsp;</td>
+									<%= ObjTables.cells("CODE_ENFORCEMENT", "CODE ENFORCEMENT", dvo.getString("CODE_ENFORCEMENT"), "boolean", "boolean", false, "csui", true) %>
 								</tr>
 							<%
 								}
@@ -544,8 +581,7 @@
 							<%
 									}
 							%>
-										<td class="csui_label">&nbsp;</td>
-										<td class="csui vertical csui_field">&nbsp;</td>
+										<%= ObjTables.cells("CODE_ENFORCEMENT", "CODE ENFORCEMENT", dvo.getString("CODE_ENFORCEMENT"), "boolean", "boolean", false, "csui", true) %>
 									</tr>
 							<%
 								}
