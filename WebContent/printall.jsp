@@ -31,6 +31,7 @@ String ids = map.getString("_id");
 String subrequest = map.getString("subrequest");
 String grp = map.getString("_grp");
 String grpid = map.getString("_grpid");
+String printpublic = map.getString("_reference");
 try {
 		
 	RequestVO nav = new RequestVO();
@@ -112,13 +113,30 @@ try {
 		function openexport(){
 			parent.openexport();
 		}
+	
+		function posturl(e){
+			var url = e.getAttribute('url').split('?');
+			var params = (url.length > 1) ? url[1].split('&') : []
+			var form = document.createElement('form');
+			form.setAttribute('method', 'post');
+			form.setAttribute('action', url[0]);
+			for (var i = 0; i < params.length; i++) {
+				var inp = document.createElement('input');
+				inp.setAttribute('type', 'text');
+				var value = params[i].split('=');
+				inp.setAttribute('name', value[0]);
+				inp.setAttribute('value', value[1]);
+				form.appendChild(inp);
+			}
+			document.getElementsByTagName('body')[0].appendChild(form);
+			document.forms[0].action="print.jsp";
+			form.submit();
+		}
 		</script>
 	</head>
 <body >
 
 <%if(multiple){ %>
-
-
 
 	<div class="csui_divider"></div>
 						<!-- List TEMPLATES-->
@@ -135,7 +153,9 @@ try {
 							 <thead>
 								<tr>
 									<td class="csui_header">TEMPLATE</td>
-									<td class="csui_header">EMAIL</td>
+									<%if(!printpublic.equals("Y")){ %>
+										<td class="csui_header">EMAIL</td>
+									<%} %>
 									<td class="csui_header">PRINT</td>
 								</tr>
 							</thead>
@@ -154,14 +174,20 @@ try {
 								%>
 								<tr id="tr_">
 									<td class="csui"><%=entry.getValue() %></td>
-									
+									<%if(!printpublic.equals("Y")){ %>
 									<td class="csui" width="1%">
 										<a  href="email.jsp?_ent=<%=map.getString("_ent") %>&_entid=-1&_type=<%=t %>&_typeid=<%=tid %>&_id=<%=ids %>&_grptype=email&_act=email&_reference=<%=entry.getKey() %>" title="E-mail" border="0"  target="lightbox-iframe"  ><img src="/cs/images/icons/controls/black/email.png" border="0"></a>
 									</td>
 									<td class="csui" width="1%">
 										<a  href="print.jsp?_ent=<%=map.getString("_ent") %>&_entid=-1&_type=<%=t %>&_typeid=<%=tid %>&_grp=<%=grp %>&_grpid=<%=grpid %>&_id=<%=ids %>&_grptype=print&_act=print&_reference=<%=entry.getKey() %>&subrequest=<%=subrequest%>" title="Print" border="0"  target="_blank" onclick="close();" ><img src="/cs/images/icons/controls/black/print.png" border="0"></a>
 									</td>
+									<%} %>
 									
+									<%if(printpublic.equals("Y")){ %>
+									<td class="csui" width="1%">
+										<a class="post-request" href="javascript:void(0)" url="print.jsp?_ent=<%=map.getString("_ent") %>&_entid=-1&_type=<%=t %>&_typeid=<%=tid %>&_grp=<%=grp %>&_grpid=<%=grpid %>&_id=<%=ids %>&_grptype=print&_act=print&_reference=<%=entry.getKey() %>&subrequest=<%=subrequest%>" title="Print" border="0" onclick="posturl(this)"><img src="/cs/images/icons/controls/black/print.png" border="0"></a>
+									</td>
+									<%} %>
 								</tr>
 								<% } %>
 							</tbody>
