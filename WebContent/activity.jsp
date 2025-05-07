@@ -218,9 +218,6 @@
 					}
 				});
 				
-				$('[name=EXP_DATE]').change(function () {
-					showPermanent();
-				});
 				
 				$('#SEND_EMAIL').click(function(e) {
 					var div = $('#EMAILFORM');
@@ -237,6 +234,7 @@
 					tselect.each(function() {
 						var vl = $(this).val();
 						$('#EXP_DATE_'+ vl).val('');
+						$('#APPLICATION_EXP_DATE_'+ vl).val('');
 					});
 					
 				});
@@ -513,7 +511,7 @@
 						</tr>
 						<tr>
 							<td class="csui_label" id="label_DESCRIPTION" valign="top">DESCRIPTION</td>
-							<td class="csui vertical csui_field" id="field_DESCRIPTION" valign="top" colspan="3"><textarea name="DESCRIPTION" itype="textarea" style="min-height: 50px" maxlength="250" onchange="showPermanent()"><%=dvo.getString("DESCRIPTION")%></textarea></td>
+							<td class="csui vertical csui_field" id="field_DESCRIPTION" valign="top" colspan="3"><textarea name="DESCRIPTION" itype="textarea" style="min-height: 50px" maxlength="250"><%=dvo.getString("DESCRIPTION")%></textarea></td>
 						</tr>
 						<tr>
 							<%= ObjTables.cells("PLAN_CHK_REQ", "PLAN CHECK REQUIRED", dvo.getString("PLAN_CHK_REQ"), "boolean", "boolean", false, "csui", true) %>
